@@ -1,23 +1,24 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 <head>
     <!-- Meta tags SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Maison des Bonnes Chose Banfora | Réparation & Vente de Téléphones</title>
-    <meta name="description" content="Contactez Maison des Bonnes Chose Banfora pour vos besoins en réparation et vente de téléphones. Secteur 15, Banfora. WhatsApp, téléphone, email.">
+    <title>Contact - Maison des Bonnes Choses Banfora | Réparation & Vente de Téléphones</title>
+    <meta name="description" content="Contactez Maison des Bonnes Choses Banfora pour vos besoins en réparation et vente de téléphones. Secteur 15, Banfora. WhatsApp, téléphone, email.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Contactez Maison des Bonnes Chose Banfora">
+    <meta property="og:title" content="Contactez Maison des Bonnes Choses Banfora">
     <meta property="og:description" content="Expert en téléphonie à Banfora depuis 2018. Réponse rapide sous 30 minutes.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://Maison des Bonnes Chose-banfora.com/contact.html">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://maisondesbonneschoses-banfora.com/contact.html">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Maison des Bonnes Chose Banfora">
+    <meta name="twitter:title" content="Contact Maison des Bonnes Choses Banfora">
     <meta name="twitter:description" content="Contactez notre équipe pour tous vos besoins en téléphonie">
+    <meta name="twitter:image" content="images/logo.jpg">
     
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,15 +26,147 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Logo -->
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <!-- ===== LOGO - FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
     
     <!-- PWA -->
     <meta name="theme-color" content="#2c3e50">
     <link rel="manifest" href="manifest.json">
     
     <style>
+        /* ===== VARIABLES CSS ===== */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e67e22;
+            --success-color: #27ae60;
+            --danger-color: #e74c3c;
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* ===== STYLES DU LOGO - CORRIGÉ ET REDIMENSIONNÉ ===== */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-link:hover {
+            transform: scale(1.02);
+        }
+        
+        .logo-img {
+            height: 60px; /* Taille optimale pour desktop */
+            width: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.1);
+            object-fit: contain;
+        }
+        
+        .logo-link:hover .logo-img {
+            box-shadow: 0 6px 18px rgba(52,152,219,0.3);
+            border-color: var(--secondary-color);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text h1 span {
+            color: var(--secondary-color);
+            font-weight: 800;
+        }
+        
+        .logo-text span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        
+        /* ===== STYLES DU LOGO DANS LE FOOTER ===== */
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 55px; /* Taille adaptée pour le footer */
+            width: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            object-fit: contain;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .footer-logo p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE - REDIMENSIONNEMENT DU LOGO SUR MOBILE ===== */
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 45px; /* Plus petit sur mobile */
+            }
+            
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.7rem;
+            }
+            
+            .footer-logo img {
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 40px; /* Encore plus petit sur très petit écran */
+            }
+            
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.65rem;
+            }
+            
+            .footer-logo img {
+                height: 40px;
+            }
+        }
+        
         /* ===== STYLES SPÉCIFIQUES CONTACT ===== */
         .contact-hero {
             min-height: 40vh;
@@ -601,6 +734,108 @@
             background: var(--secondary-color);
         }
         
+        /* Header styles */
+        header {
+            background: var(--primary-color);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-container ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .nav-link.active {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .auth-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .auth-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
         @media (max-width: 992px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -639,6 +874,51 @@
                 width: 50px;
                 height: 50px;
             }
+            
+            .nav-container {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: white;
+                padding: 80px 20px 20px;
+                transition: left 0.3s ease;
+                z-index: 1001;
+            }
+            
+            .nav-container.active {
+                left: 0;
+            }
+            
+            .nav-container ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-link {
+                color: var(--primary-color);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .mobile-menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            
+            .mobile-menu-overlay.active {
+                display: block;
+            }
         }
         
         @media (max-width: 480px) {
@@ -661,6 +941,104 @@
             .social-buttons {
                 justify-content: center;
             }
+            
+            .header-actions {
+                gap: 15px;
+            }
+            
+            .auth-btn span {
+                display: none;
+            }
+            
+            .auth-btn i {
+                margin: 0;
+            }
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid var(--secondary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52,152,219,0.3);
         }
     </style>
 </head>
@@ -675,11 +1053,11 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- Logo -->
+                <!-- ===== LOGO CORRIGÉ ET REDIMENSIONNÉ ===== -->
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.png" alt="Maison des Bonnes Chose Banfora" class="logo-img">
+                    <img src="images/logo.jpg" alt="Maison des Bonnes Choses Banfora" class="logo-img">
                     <div class="logo-text">
-                        <h1>Sam<span>service</span></h1>
+                        <h1><span>Maison des Bonnes Choses</span></h1>
                         <span>Banfora depuis 2018</span>
                     </div>
                 </a>
@@ -725,7 +1103,7 @@
 
                     <!-- Authentification -->
                     <button class="auth-btn" id="authButton">
-                        <i class="fas fa-user"></i> Connexion
+                        <i class="fas fa-user"></i> <span>Connexion</span>
                     </button>
 
                     <!-- Menu mobile -->
@@ -743,7 +1121,7 @@
     <!-- Hero Section -->
     <section class="contact-hero">
         <div class="container text-center">
-            <h1>Contactez Maison des Bonnes Chose</h1>
+            <h1>Contactez Maison des Bonnes Choses</h1>
             <p>Notre équipe est disponible 7j/7 pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
         </div>
     </section>
@@ -795,8 +1173,8 @@
                             <div class="contact-detail-content">
                                 <h4>Email</h4>
                                 <p>Réponse sous 24h</p>
-                                <a href="mailto:contact@Maison des Bonnes Chose.bf">contact@Maison des Bonnes Chose.bf</a>
-                                <p style="font-size: 0.85rem; color: #999; margin-top: 5px;">support@Maison des Bonnes Chose.bf</p>
+                                <a href="mailto:contact@maisondesbonneschoses.bf">contact@maisondesbonneschoses.bf</a>
+                                <p style="font-size: 0.85rem; color: #999; margin-top: 5px;">support@maisondesbonneschoses.bf</p>
                             </div>
                         </div>
                         
@@ -981,7 +1359,7 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Carte de localisation de Maison des Bonnes Chose Banfora">
+                        title="Carte de localisation de Maison des Bonnes Choses Banfora">
                     </iframe>
                 </div>
                 
@@ -1072,11 +1450,11 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Section Logo -->
+                <!-- Section Logo - CORRIGÉ ET REDIMENSIONNÉ -->
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/logo.png" alt="Maison des Bonnes Chose" style="height: 50px; margin-bottom: 15px;">
-                        <h3>Maison des Bonnes Chose Banfora</h3>
+                        <img src="images/logo.jpg" alt="Maison des Bonnes Choses Banfora">
+                        <h3>Maison des Bonnes Choses</h3>
                         <p>Votre partenaire de confiance en téléphonie depuis 2018.</p>
                         <div class="social-links">
                             <a href="https://wa.me/22656323077" target="_blank" title="WhatsApp">
@@ -1125,7 +1503,7 @@
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt"></i> Secteur 15, Banfora</p>
                         <p><i class="fas fa-phone"></i> +226 56 32 30 77</p>
-                        <p><i class="fas fa-envelope"></i> contact@Maison des Bonnes Chose.bf</p>
+                        <p><i class="fas fa-envelope"></i> contact@maisondesbonneschoses.bf</p>
                         <p><i class="fas fa-clock"></i> 8h - 22h, 7j/7</p>
                         <p><i class="fab fa-whatsapp"></i> WhatsApp: 24h/24</p>
                     </div>
@@ -1134,7 +1512,7 @@
 
             <!-- Copyright -->
             <div class="copyright">
-                <p>&copy; 2024 Maison des Bonnes Chose Banfora. Tous droits réservés.</p>
+                <p>&copy; 2024 Maison des Bonnes Choses Banfora. Tous droits réservés.</p>
                 <p style="margin-top: 10px;">
                     <i class="fas fa-heart" style="color: #e74c3c;"></i> 
                     Fait avec passion pour Banfora
@@ -1356,7 +1734,7 @@
                     minute: '2-digit'
                 });
                 
-                return `👋 *NOUVEAU MESSAGE - Maison des Bonnes Chose BANFORA*
+                return `👋 *NOUVEAU MESSAGE - Maison des Bonnes Choses BANFORA*
 
 ━━━━━━━━━━━━━━━━━━━
 📋 *INFORMATIONS CLIENT*
@@ -1375,7 +1753,7 @@
 ${data.message}
 
 ━━━━━━━━━━━━━━━━━━━
-📍 *Maison des Bonnes Chose - Secteur 15, Banfora*
+📍 *Maison des Bonnes Choses - Secteur 15, Banfora*
 ⚡ Réponse garantie sous 30 minutes
 ━━━━━━━━━━━━━━━━━━━
 
@@ -1495,7 +1873,7 @@ ${data.message}
                 
                 // Écouter les changements du panier
                 window.addEventListener('storage', (e) => {
-                    if (e.key === 'Maison des Bonnes Chose_cart') {
+                    if (e.key === 'maison_bonnes_choses_cart') {
                         this.updateCartCount();
                     }
                 });
@@ -1516,14 +1894,14 @@ ${data.message}
             updateCartCount() {
                 const cartCount = document.getElementById('cartCount');
                 if (cartCount) {
-                    const cart = JSON.parse(localStorage.getItem('Maison des Bonnes Chose_cart')) || [];
+                    const cart = JSON.parse(localStorage.getItem('maison_bonnes_choses_cart')) || [];
                     const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
                     cartCount.textContent = totalItems;
                 }
             }
             
             showCartModal() {
-                const cart = JSON.parse(localStorage.getItem('Maison des Bonnes Chose_cart')) || [];
+                const cart = JSON.parse(localStorage.getItem('maison_bonnes_choses_cart')) || [];
                 
                 if (cart.length === 0) {
                     this.showNotification('Votre panier est vide', 'info');
@@ -1543,19 +1921,19 @@ ${data.message}
                 if (!authButton) return;
                 
                 // Vérifier si un utilisateur est connecté
-                const user = localStorage.getItem('Maison des Bonnes Chose_user');
+                const user = localStorage.getItem('maison_bonnes_choses_user');
                 
                 if (user) {
                     try {
                         const userData = JSON.parse(user);
-                        authButton.innerHTML = `<i class="fas fa-user-check"></i> ${userData.prenom || 'Compte'}`;
+                        authButton.innerHTML = `<i class="fas fa-user-check"></i> <span>${userData.prenom || 'Compte'}</span>`;
                         authButton.style.background = 'var(--success-color)';
                         authButton.onclick = () => this.showUserMenu();
                     } catch (e) {
-                        localStorage.removeItem('Maison des Bonnes Chose_user');
+                        localStorage.removeItem('maison_bonnes_choses_user');
                     }
                 } else {
-                    authButton.innerHTML = '<i class="fas fa-user"></i> Connexion';
+                    authButton.innerHTML = '<i class="fas fa-user"></i> <span>Connexion</span>';
                     authButton.style.background = '';
                     authButton.onclick = () => this.showAuthModal();
                 }
