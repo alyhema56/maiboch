@@ -1,23 +1,24 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 <head>
     <!-- Meta tags SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison des Bonnes Chose - Vente et Réparation de Téléphones à Banfora</title>
-    <meta name="description" content="Maison des Bonnes Chose - Vente et réparation de téléphones à Banfora. iPhone, Android, radios, accessoires. Service après-vente garanti depuis 2018.">
+    <title>Maison des Bonnes Choses - Vente et Réparation de Téléphones à Banfora</title>
+    <meta name="description" content="Maison des Bonnes Choses - Vente et réparation de téléphones à Banfora. iPhone, Android, radios, accessoires. Service après-vente garanti depuis 2018.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Maison des Bonnes Chose - Expert en Téléphonie à Banfora">
+    <meta property="og:title" content="Maison des Bonnes Choses - Expert en Téléphonie à Banfora">
     <meta property="og:description" content="Vente et réparation de téléphones, iPhone, Android, radios. Service professionnel à Banfora.">
-    <meta property="og:image" content="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1920">
-    <meta property="og:url" content="https://Maison des Bonnes Chose-banfora.com">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://maisondesbonneschoses-banfora.com">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Maison des Bonnes Chose Banfora">
+    <meta name="twitter:title" content="Maison des Bonnes Choses Banfora">
     <meta name="twitter:description" content="Votre partenaire de confiance pour l'achat et la réparation de téléphones">
+    <meta name="twitter:image" content="images/logo.jpg">
     
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,15 +26,111 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Logo -->
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <!-- ===== LOGO - FAVICON ===== -->
+    <!-- ICI LE LOGO EST CORRECTEMENT PLACÉ COMME FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
     
     <!-- PWA -->
     <meta name="theme-color" content="#2c3e50">
     <link rel="manifest" href="manifest.json">
     
     <style>
+        /* ===== STYLES POUR LE LOGO ===== */
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-link:hover {
+            transform: scale(1.02);
+        }
+        
+        .logo-img {
+            height: 70px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .logo-link:hover .logo-img {
+            box-shadow: 0 6px 20px rgba(52,152,219,0.4);
+            border-color: #3498db;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin: 0;
+            line-height: 1.2;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text h1 span {
+            color: #3498db;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo-text span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+        }
+        
+        /* Footer logo styles */
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 50px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.4rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.7rem;
+            }
+        }
+        
         /* ===== HERO SLIDER PROFESSIONNEL HD ===== */
         .hero {
             position: relative;
@@ -72,23 +169,23 @@
         }
         
         .hero-slide:nth-child(1) {
-            background-image: url('https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1920&dpr=2');
+            background-image: url('images/produits/Galaxy.jpg');
         }
         
         .hero-slide:nth-child(2) {
-            background-image: url('https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1920&dpr=2');
+            background-image: url('images/produits/Boreal580.jpg');
         }
         
         .hero-slide:nth-child(3) {
-            background-image: url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1920&dpr=2');
+            background-image: url('images/produits/BOOMBOX.jpg');
         }
         
         .hero-slide:nth-child(4) {
-            background-image: url('https://images.pexels.com/photos/163097/mobile-phone-smartphone-iphone-mobile-163097.jpeg?auto=compress&cs=tinysrgb&w=1920&dpr=2');
+            background-image: url('images/produits/Montres-unique_couleur.jpg');
         }
         
         .hero-slide:nth-child(5) {
-            background-image: url('https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1920&dpr=2');
+            background-image: url('images/produits/Tecno_P20.jpg');
         }
         
         .hero-slide.active {
@@ -236,7 +333,7 @@
         }
         
         .btn-auth-user {
-            background: var(--success-color);
+            background: #27ae60;
             color: white;
             padding: 10px 20px;
             border-radius: 30px;
@@ -249,7 +346,7 @@
         }
         
         .btn-auth-user:hover {
-            background: #27ae60;
+            background: #2ecc71;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
         }
@@ -306,8 +403,8 @@
         
         .btn-details {
             background: transparent;
-            color: var(--secondary-color);
-            border: 1.5px solid var(--secondary-color);
+            color: #2c3e50;
+            border: 1.5px solid #2c3e50;
             padding: 12px 25px;
             border-radius: 30px;
             font-weight: 600;
@@ -322,7 +419,7 @@
         }
         
         .btn-details:hover {
-            background: var(--secondary-color);
+            background: #2c3e50;
             color: white;
             transform: translateY(-3px);
         }
@@ -374,7 +471,7 @@
         
         .product-preview-name {
             font-weight: 600;
-            color: var(--primary-color);
+            color: #2c3e50;
         }
         
         .product-preview-price {
@@ -439,7 +536,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--primary-color);
+            color: #2c3e50;
         }
         
         .form-control {
@@ -452,7 +549,7 @@
         }
         
         .form-control:focus {
-            border-color: var(--secondary-color);
+            border-color: #3498db;
             outline: none;
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
@@ -515,7 +612,7 @@
             }
             
             .btn-auth {
-                background: var(--primary-color);
+                background: #2c3e50;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
                 padding: 12px 18px;
             }
@@ -650,24 +747,99 @@
                 image-rendering: crisp-edges;
             }
         }
+        
+        /* Styles pour modals */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(-30px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .modal-header h3 i {
+            margin-right: 10px;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 25px;
+        }
     </style>
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loader"></div>
-        <h2 style="color: white;">Chargement Maison des Bonnes Chose...</h2>
+        <h2 style="color: white;">Chargement Maison des Bonnes Choses...</h2>
     </div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- Logo -->
+                <!-- ===== LOGO - ICI LE LOGO EST CORRECTEMENT PLACÉ ===== -->
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.png" alt="Maison des Bonnes Chose Banfora" class="logo-img">
+                    <img src="images/logo.jpg" alt="Maison des Bonnes Choses Banfora" class="logo-img">
                     <div class="logo-text">
-                        <h1>Sam<span>service</span></h1>
+                        <h1>Maison des <span>Bonnes Choses</span></h1>
                         <span>Banfora depuis 2018</span>
                     </div>
                 </a>
@@ -787,7 +959,7 @@
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Mon iPhone a été réparé en moins de 2 heures ! Service rapide et professionnel. Je recommande Maison des Bonnes Chose à tous à Banfora."</p>
+                        <p class="testimonial-text">"Mon iPhone a été réparé en moins de 2 heures ! Service rapide et professionnel. Je recommande Maison des Bonnes Choses à tous à Banfora."</p>
                         <p class="testimonial-author">Fatoumata S.</p>
                         <p class="testimonial-role">Commerçante</p>
                     </div>
@@ -797,7 +969,7 @@
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"J'ai acheté mon premier téléphone chez Maison des Bonnes Chose. Le prix était correct et le service après-vente est excellent. Merci !"</p>
+                        <p class="testimonial-text">"J'ai acheté mon premier téléphone chez Maison des Bonnes Choses. Le prix était correct et le service après-vente est excellent. Merci !"</p>
                         <p class="testimonial-author">Abdoulaye K.</p>
                         <p class="testimonial-role">Étudiant</p>
                     </div>
@@ -807,7 +979,7 @@
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="testimonial-text">"La batterie de mon Samsung ne tenait plus. Maison des Bonnes Chose l'a remplacée rapidement et à un prix très abordable. Satisfaite à 100%."</p>
+                        <p class="testimonial-text">"La batterie de mon Samsung ne tenait plus. Maison des Bonnes Choses l'a remplacée rapidement et à un prix très abordable. Satisfaite à 100%."</p>
                         <p class="testimonial-author">Mariam D.</p>
                         <p class="testimonial-role">Infirmière</p>
                     </div>
@@ -825,10 +997,10 @@
         </div>
     </section>
 
-    <!-- ===== 4. POURQUOI CHOISIR Maison des Bonnes Chose ? ===== -->
+    <!-- ===== 4. POURQUOI CHOISIR MAISON DES BONNES CHOSES ? ===== -->
     <section class="section features-section">
         <div class="container">
-            <h2 class="section-title">Pourquoi Choisir Maison des Bonnes Chose ?</h2>
+            <h2 class="section-title">Pourquoi Choisir Maison des Bonnes Choses ?</h2>
             <p class="section-subtitle">Découvrez ce qui fait notre différence depuis 2018</p>
             
             <div class="features-grid">
@@ -867,13 +1039,13 @@
         </div>
     </section>
 
-    <!-- ===== 5. À PROPOS DE Maison des Bonnes Chose ===== -->
+    <!-- ===== 5. À PROPOS DE MAISON DES BONNES CHOSES ===== -->
     <section class="section about-section" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">À Propos de Maison des Bonnes Chose</h2>
-                    <p>Depuis 2018, Maison des Bonnes Chose s'est imposé comme le leader de la téléphonie à Banfora. Notre mission est de fournir des produits de qualité avec un service exceptionnel.</p>
+                    <h2 class="section-title">À Propos de Maison des Bonnes Choses</h2>
+                    <p>Depuis 2018, Maison des Bonnes Choses s'est imposé comme le leader de la téléphonie à Banfora. Notre mission est de fournir des produits de qualité avec un service exceptionnel.</p>
                     
                     <div class="about-features">
                         <div class="about-feature">
@@ -904,7 +1076,7 @@
                 
                 <div class="about-image">
                     <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                         alt="Maison des Bonnes Chose Banfora" loading="lazy">
+                         alt="Maison des Bonnes Choses Banfora" loading="lazy">
                 </div>
             </div>
         </div>
@@ -954,7 +1126,7 @@
                     <a href="tel:+22656323077" class="btn btn-primary">
                         <i class="fas fa-phone"></i> Appeler maintenant
                     </a>
-                    <a href="https://wa.me/22656323077" class="btn btn-secondary" target="_blank">
+                    <a href="https://wa.me/22656323077" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
@@ -967,12 +1139,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <!-- ===== LOGO DANS LE FOOTER ===== -->
                     <div class="footer-logo">
-                        <img src="images/logo.png" alt="Maison des Bonnes Chose" style="height: 50px; margin-bottom: 15px;">
-                        <h3>Maison des Bonnes Chose Banfora</h3>
+                        <img src="images/logo.jpg" alt="Maison des Bonnes Choses Banfora">
+                        <h3>Maison des Bonnes Choses</h3>
                         <p>Votre partenaire de confiance en téléphonie depuis 2018.</p>
                         <div class="social-links">
-                            <a href="https://wa.me/22656323077" target="_blank" title="WhatsApp">
+                            <a href="https://wa.me/22656323077" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                             <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1008,14 +1181,14 @@
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt"></i> Secteur 15, Banfora</p>
                         <p><i class="fas fa-phone"></i> +226 56 32 30 77</p>
-                        <p><i class="fas fa-envelope"></i> contact@Maison des Bonnes Chose.bf</p>
+                        <p><i class="fas fa-envelope"></i> contact@maisondesbonneschoses.bf</p>
                         <p><i class="fas fa-clock"></i> 8h - 22h, 7j/7</p>
                     </div>
                 </div>
             </div>
 
             <div class="copyright">
-                <p>&copy; 2024 Maison des Bonnes Chose Banfora. Tous droits réservés.</p>
+                <p>&copy; 2024 Maison des Bonnes Choses Banfora. Tous droits réservés.</p>
                 <p style="margin-top: 10px;">
                     <i class="fas fa-heart" style="color: #e74c3c;"></i> 
                     Fait avec passion pour Banfora
@@ -1026,7 +1199,7 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/22656323077" class="floating-btn whatsapp" target="_blank">
+        <a href="https://wa.me/22656323077" class="floating-btn whatsapp" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
             <span class="floating-btn-tooltip">WhatsApp</span>
         </a>
@@ -1035,13 +1208,19 @@
             <span class="floating-btn-tooltip">Appeler</span>
         </a>
         <a href="https://www.google.com/maps/search/?api=1&query=Secteur+15+Banfora+Burkina+Faso" 
-           class="floating-btn map" target="_blank">
+           class="floating-btn map" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-map-marker-alt"></i>
             <span class="floating-btn-tooltip">Localisation</span>
         </a>
     </div>
 
-    <script>
+   <script>
+        // ============================================
+        // ===== CORRECTION DU NOM DE LA BOUTIQUE =====
+        // ============================================
+        // Changement de "Maison des Bonnes Chose" à "Maison des Bonnes Choses"
+        // Correction orthographique sur tout le site
+        
         // ============================================
         // ===== 1. CONFIGURATION GOOGLE SHEETS =====
         // ============================================
@@ -1049,39 +1228,69 @@
         const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwX5flW7-1AqoKjUE5LCvzSENEnEfa7D7VoGz6RdJL3N65F8twst-q2EKfRXDBWRj4j/exec';
         
         // ============================================
-        // ===== 2. GESTIONNAIRE PRINCIPAL =====
+        // ===== 2. CONSTANTES ET CONFIGURATION =====
         // ============================================
-        class Maison des Bonnes ChoseApp {
+        const STORAGE_KEYS = {
+            USERS: 'maison_bonnes_choses_users',
+            CURRENT_USER: 'maison_bonnes_choses_user',
+            CART: 'maison_bonnes_choses_cart'
+        };
+        
+        const NOTIFICATION_DURATION = 4000;
+        const SLIDE_DURATION = 5000;
+        const MIN_PASSWORD_LENGTH = 6;
+        
+        // ============================================
+        // ===== 3. GESTIONNAIRE PRINCIPAL =====
+        // ============================================
+        class MaisonDesBonnesChosesApp {
             constructor() {
                 this.currentUser = null;
                 this.pendingProduct = null;
+                this.isLoading = false;
                 this.init();
             }
             
+            // Initialisation principale
             init() {
                 this.loadUser();
                 this.renderAuthButtons();
                 this.initEventListeners();
                 this.initUserDatabase();
+                this.loadCart();
             }
             
+            // Base de données utilisateurs (localStorage)
             initUserDatabase() {
-                if (!localStorage.getItem('Maison des Bonnes Chose_users')) {
-                    localStorage.setItem('Maison des Bonnes Chose_users', JSON.stringify([]));
+                if (!localStorage.getItem(STORAGE_KEYS.USERS)) {
+                    localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify([]));
                 }
             }
             
+            // Charger l'utilisateur connecté
             loadUser() {
-                const savedUser = localStorage.getItem('Maison des Bonnes Chose_user');
+                const savedUser = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
                 if (savedUser) {
                     try {
                         this.currentUser = JSON.parse(savedUser);
                     } catch (e) {
-                        localStorage.removeItem('Maison des Bonnes Chose_user');
+                        localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
                     }
                 }
             }
             
+            // Charger le panier
+            loadCart() {
+                if (!localStorage.getItem(STORAGE_KEYS.CART)) {
+                    localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify([]));
+                }
+            }
+            
+            // ============================================
+            // ===== GESTION DE L'AUTHENTIFICATION =====
+            // ============================================
+            
+            // Afficher les boutons d'authentification
             renderAuthButtons() {
                 const container = document.getElementById('authButtons');
                 if (!container) return;
@@ -1090,7 +1299,7 @@
                     container.innerHTML = `
                         <div class="btn-auth-user" onclick="app.showUserMenu()">
                             <i class="fas fa-user-circle"></i>
-                            <span>${this.currentUser.prenom || 'Compte'}</span>
+                            <span>${this.escapeHtml(this.currentUser.prenom || 'Compte')}</span>
                             <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
                         </div>
                         <button class="btn-auth-logout" onclick="app.logout()">
@@ -1112,15 +1321,528 @@
                 }
             }
             
+            // Échapper les caractères HTML pour éviter XSS
+            escapeHtml(text) {
+                if (!text) return '';
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+            
+            // Afficher le modal d'authentification
+            showAuthModal(tab = 'login') {
+                this.closeAllModals();
+                
+                const modalHTML = `
+                    <div class="modal" id="authModal">
+                        <div class="modal-content" style="max-width: 500px;">
+                            <div class="modal-header">
+                                <h3><i class="fas fa-user-circle"></i> Maison des Bonnes Choses</h3>
+                                <button class="close-modal" onclick="app.closeAuthModal()">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="auth-tabs">
+                                    <button class="auth-tab ${tab === 'login' ? 'active' : ''}" 
+                                            onclick="app.switchAuthTab('login')">
+                                        <i class="fas fa-sign-in-alt"></i> Se connecter
+                                    </button>
+                                    <button class="auth-tab ${tab === 'register' ? 'active' : ''}" 
+                                            onclick="app.switchAuthTab('register')">
+                                        <i class="fas fa-user-plus"></i> S'inscrire
+                                    </button>
+                                </div>
+                                
+                                <div class="auth-forms">
+                                    ${this.renderLoginForm(tab)}
+                                    ${this.renderRegisterForm(tab)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+                
+                setTimeout(() => {
+                    const modal = document.getElementById('authModal');
+                    if (modal) {
+                        modal.classList.add('show');
+                        document.body.style.overflow = 'hidden';
+                        this.closeLoginRequiredModal();
+                    }
+                }, 10);
+            }
+            
+            // Formulaire de connexion
+            renderLoginForm(tab) {
+                return `
+                    <form id="loginForm" class="auth-form ${tab === 'login' ? 'active' : ''}" 
+                          onsubmit="app.login(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="loginEmail" class="form-control" 
+                                   placeholder="exemple@email.com" required autocomplete="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Mot de passe</label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" class="form-control" 
+                                       placeholder="••••••••" required autocomplete="current-password">
+                                <button type="button" class="toggle-password" 
+                                        onclick="app.togglePassword('loginPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                            <i class="fas fa-sign-in-alt"></i> Se connecter
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 20px; color: #666;">
+                            Pas encore de compte ? 
+                            <a href="#" onclick="app.switchAuthTab('register'); return false;" 
+                               style="color: #3498db; font-weight: 600;">
+                                S'inscrire
+                            </a>
+                        </p>
+                    </form>
+                `;
+            }
+            
+            // Formulaire d'inscription
+            renderRegisterForm(tab) {
+                return `
+                    <form id="registerForm" class="auth-form ${tab === 'register' ? 'active' : ''}" 
+                          onsubmit="app.register(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Nom</label>
+                                <input type="text" id="registerNom" class="form-control" 
+                                       placeholder="Votre nom" required autocomplete="family-name">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Prénom</label>
+                                <input type="text" id="registerPrenom" class="form-control" 
+                                       placeholder="Votre prénom" required autocomplete="given-name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="registerEmail" class="form-control" 
+                                   placeholder="exemple@email.com" required autocomplete="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Mot de passe</label>
+                            <div class="password-input">
+                                <input type="password" id="registerPassword" class="form-control" 
+                                       placeholder="Minimum 6 caractères" required 
+                                       autocomplete="new-password" minlength="${MIN_PASSWORD_LENGTH}">
+                                <button type="button" class="toggle-password" 
+                                        onclick="app.togglePassword('registerPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> Confirmer</label>
+                            <div class="password-input">
+                                <input type="password" id="registerConfirmPassword" class="form-control" 
+                                       placeholder="Confirmez" required autocomplete="new-password">
+                                <button type="button" class="toggle-password" 
+                                        onclick="app.togglePassword('registerConfirmPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acceptTerms" required>
+                                <span>J'accepte les <a href="#" onclick="app.showTerms()">conditions générales</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; background: linear-gradient(45deg, #e67e22, #d35400);">
+                            <i class="fas fa-user-plus"></i> Créer mon compte
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 20px; color: #666;">
+                            Déjà inscrit ? 
+                            <a href="#" onclick="app.switchAuthTab('login'); return false;" 
+                               style="color: #3498db; font-weight: 600;">
+                                Se connecter
+                            </a>
+                        </p>
+                    </form>
+                `;
+            }
+            
+            // Afficher les conditions générales
+            showTerms() {
+                this.showNotification('📄 Conditions générales en cours de chargement...', 'info');
+            }
+            
+            // Fermer le modal d'authentification
+            closeAuthModal() {
+                const modal = document.getElementById('authModal');
+                if (modal) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.remove();
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+            }
+            
+            // Changer d'onglet
+            switchAuthTab(tab) {
+                const loginForm = document.getElementById('loginForm');
+                const registerForm = document.getElementById('registerForm');
+                const tabs = document.querySelectorAll('.auth-tab');
+                
+                if (!loginForm || !registerForm) return;
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                if (tab === 'login') {
+                    tabs[0]?.classList.add('active');
+                    loginForm.classList.add('active');
+                    registerForm.classList.remove('active');
+                } else {
+                    tabs[1]?.classList.add('active');
+                    registerForm.classList.add('active');
+                    loginForm.classList.remove('active');
+                }
+            }
+            
+            // Afficher/masquer mot de passe
+            togglePassword(fieldId) {
+                const field = document.getElementById(fieldId);
+                if (!field) return;
+                
+                const icon = field.parentNode.querySelector('i');
+                if (!icon) return;
+                
+                if (field.type === 'password') {
+                    field.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    field.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            }
+            
+            // Connexion
+            async login(event) {
+                event.preventDefault();
+                
+                if (this.isLoading) return;
+                
+                const email = document.getElementById('loginEmail')?.value;
+                const password = document.getElementById('loginPassword')?.value;
+                
+                if (!email || !password) {
+                    this.showNotification('❌ Veuillez remplir tous les champs', 'error');
+                    return;
+                }
+                
+                this.isLoading = true;
+                const submitBtn = event.submitter;
+                const originalText = submitBtn?.innerHTML || 'Se connecter';
+                
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connexion...';
+                    submitBtn.disabled = true;
+                }
+                
+                try {
+                    const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS)) || [];
+                    const user = users.find(u => u.email === email && u.password === this.hashPassword(password));
+                    
+                    if (user) {
+                        this.currentUser = {
+                            id: user.id,
+                            nom: user.nom,
+                            prenom: user.prenom,
+                            email: user.email
+                        };
+                        
+                        localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(this.currentUser));
+                        this.renderAuthButtons();
+                        this.closeAuthModal();
+                        this.showNotification('✅ Connexion réussie !', 'success');
+                        
+                        // Si un produit était en attente
+                        if (this.pendingProduct) {
+                            setTimeout(() => {
+                                this.processPurchase(this.currentUser, this.pendingProduct);
+                                this.pendingProduct = null;
+                            }, 1000);
+                        }
+                    } else {
+                        this.showNotification('❌ Email ou mot de passe incorrect', 'error');
+                    }
+                } catch (error) {
+                    console.error('❌ Erreur de connexion:', error);
+                    this.showNotification('❌ Erreur lors de la connexion', 'error');
+                } finally {
+                    this.isLoading = false;
+                    if (submitBtn) {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                }
+            }
+            
+            // Hash simple du mot de passe (à remplacer par un vrai hash en production)
+            hashPassword(password) {
+                // Simulation de hash - À NE PAS UTILISER EN PRODUCTION
+                return btoa(password);
+            }
+            
+            // Inscription
+            async register(event) {
+                event.preventDefault();
+                
+                if (this.isLoading) return;
+                
+                const nom = document.getElementById('registerNom')?.value.trim();
+                const prenom = document.getElementById('registerPrenom')?.value.trim();
+                const email = document.getElementById('registerEmail')?.value.trim();
+                const password = document.getElementById('registerPassword')?.value;
+                const confirmPassword = document.getElementById('registerConfirmPassword')?.value;
+                const acceptTerms = document.getElementById('acceptTerms')?.checked;
+                
+                // Validation
+                if (!nom || !prenom || !email || !password) {
+                    this.showNotification('❌ Tous les champs sont requis', 'error');
+                    return;
+                }
+                
+                if (!this.validateEmail(email)) {
+                    this.showNotification('❌ Format d\'email invalide', 'error');
+                    return;
+                }
+                
+                if (password !== confirmPassword) {
+                    this.showNotification('❌ Les mots de passe ne correspondent pas', 'error');
+                    return;
+                }
+                
+                if (password.length < MIN_PASSWORD_LENGTH) {
+                    this.showNotification(`❌ Le mot de passe doit contenir au moins ${MIN_PASSWORD_LENGTH} caractères`, 'error');
+                    return;
+                }
+                
+                if (!acceptTerms) {
+                    this.showNotification('❌ Vous devez accepter les conditions générales', 'error');
+                    return;
+                }
+                
+                this.isLoading = true;
+                const submitBtn = event.submitter;
+                const originalText = submitBtn?.innerHTML || 'Créer mon compte';
+                
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Inscription...';
+                    submitBtn.disabled = true;
+                }
+                
+                try {
+                    const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS)) || [];
+                    const emailExists = users.find(u => u.email === email);
+                    
+                    if (emailExists) {
+                        this.showNotification('❌ Cet email est déjà inscrit', 'error');
+                        return;
+                    }
+                    
+                    // Envoyer à Google Sheets (mode no-cors)
+                    await fetch(GOOGLE_SHEETS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            action: 'register',
+                            nom: nom,
+                            prenom: prenom,
+                            email: email,
+                            password: this.hashPassword(password),
+                            date: new Date().toLocaleString('fr-FR')
+                        })
+                    }).catch(() => {
+                        // Ignorer les erreurs CORS
+                    });
+                    
+                    // Créer le nouvel utilisateur
+                    const newUser = {
+                        id: this.generateUserId(),
+                        nom: nom,
+                        prenom: prenom,
+                        email: email,
+                        password: this.hashPassword(password),
+                        date: new Date().toISOString(),
+                        orders: []
+                    };
+                    
+                    users.push(newUser);
+                    localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+                    
+                    // Connecter automatiquement
+                    this.currentUser = {
+                        id: newUser.id,
+                        nom: nom,
+                        prenom: prenom,
+                        email: email
+                    };
+                    
+                    localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(this.currentUser));
+                    this.renderAuthButtons();
+                    this.closeAuthModal();
+                    this.showNotification('✅ Inscription réussie !', 'success');
+                    
+                } catch (error) {
+                    console.error('❌ Erreur d\'inscription:', error);
+                    this.showNotification('❌ Erreur lors de l\'inscription', 'error');
+                } finally {
+                    this.isLoading = false;
+                    if (submitBtn) {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                }
+            }
+            
+            // Générer un ID utilisateur unique
+            generateUserId() {
+                return 'USER-' + Date.now().toString(36).toUpperCase() + '-' + 
+                       Math.random().toString(36).substring(2, 6).toUpperCase();
+            }
+            
+            // Valider format email
+            validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // Déconnexion
+            logout() {
+                this.currentUser = null;
+                this.pendingProduct = null;
+                localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+                this.renderAuthButtons();
+                this.showNotification('✅ Déconnexion réussie', 'success');
+            }
+            
             // ============================================
-            // ===== FONCTION D'ACHAT - CONNEXION REQUISE =====
+            // ===== MENU UTILISATEUR =====
             // ============================================
+            
+            // Afficher le menu utilisateur
+            showUserMenu() {
+                if (!this.currentUser) return;
+                
+                this.closeAllModals();
+                
+                const initials = (this.currentUser.prenom?.[0] || '') + (this.currentUser.nom?.[0] || '');
+                
+                const menuHTML = `
+                    <div class="modal" id="userMenuModal">
+                        <div class="modal-content" style="max-width: 350px;">
+                            <div class="modal-header">
+                                <h3><i class="fas fa-user-circle"></i> Mon compte</h3>
+                                <button class="close-modal" onclick="app.closeUserMenu()">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div style="text-align: center; margin-bottom: 25px;">
+                                    <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #3498db, #2980b9); 
+                                         border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+                                         color: white; font-size: 2rem; margin: 0 auto 15px;">
+                                        ${initials || 'S'}
+                                    </div>
+                                    <h4 style="margin-bottom: 5px;">${this.escapeHtml(this.currentUser.prenom)} ${this.escapeHtml(this.currentUser.nom)}</h4>
+                                    <p style="color: #666; font-size: 0.9rem;">${this.escapeHtml(this.currentUser.email)}</p>
+                                </div>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewProfile()">
+                                        <i class="fas fa-user-edit"></i> Modifier mon profil
+                                    </button>
+                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewOrders()">
+                                        <i class="fas fa-shopping-bag"></i> Mes achats
+                                    </button>
+                                    <button class="btn btn-primary" style="width: 100%; background: #e74c3c;" onclick="app.logout(); app.closeUserMenu();">
+                                        <i class="fas fa-sign-out-alt"></i> Déconnexion
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.insertAdjacentHTML('beforeend', menuHTML);
+                
+                setTimeout(() => {
+                    const modal = document.getElementById('userMenuModal');
+                    if (modal) {
+                        modal.classList.add('show');
+                        document.body.style.overflow = 'hidden';
+                    }
+                }, 10);
+            }
+            
+            // Fermer le menu utilisateur
+            closeUserMenu() {
+                const modal = document.getElementById('userMenuModal');
+                if (modal) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.remove();
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+            }
+            
+            // Voir le profil (à implémenter)
+            viewProfile() {
+                this.closeUserMenu();
+                this.showNotification('📝 Fonctionnalité en cours de développement', 'info');
+            }
+            
+            // Voir les commandes (à implémenter)
+            viewOrders() {
+                this.closeUserMenu();
+                this.showNotification('📦 Vos achats seront bientôt disponibles', 'info');
+            }
+            
+            // ============================================
+            // ===== GESTION DES ACHATS =====
+            // ============================================
+            
+            // Acheter un produit
             async buyProduct(productId) {
                 const product = window.productsData.find(p => p.id === productId);
-                if (!product) return;
+                if (!product) {
+                    this.showNotification('❌ Produit non trouvé', 'error');
+                    return;
+                }
+                
+                // Vérifier le stock
+                if (product.stock <= 0) {
+                    this.showNotification('❌ Produit en rupture de stock', 'error');
+                    return;
+                }
                 
                 // Vérifier si l'utilisateur est connecté
                 if (!this.currentUser) {
+                    this.pendingProduct = product;
                     this.showLoginRequiredModal(product);
                     return;
                 }
@@ -1129,10 +1851,10 @@
                 await this.processPurchase(this.currentUser, product);
             }
             
-            // ============================================
-            // ===== MODAL : CONNEXION REQUISE =====
-            // ============================================
+            // Modal : Connexion requise
             showLoginRequiredModal(product) {
+                this.closeAllModals();
+                
                 const modalHTML = `
                     <div class="modal login-required-modal" id="loginRequiredModal">
                         <div class="modal-content">
@@ -1145,7 +1867,7 @@
                                     <i class="fas fa-user-lock"></i>
                                 </div>
                                 
-                                <h3 style="color: var(--primary-color); margin-bottom: 15px;">
+                                <h3 style="color: #2c3e50; margin-bottom: 15px;">
                                     Veuillez vous connecter
                                 </h3>
                                 
@@ -1154,9 +1876,9 @@
                                 </p>
                                 
                                 <div class="product-preview">
-                                    <img src="${product.image}" alt="${product.name}" class="product-preview-image">
+                                    <img src="${this.escapeHtml(product.image)}" alt="${this.escapeHtml(product.name)}" class="product-preview-image">
                                     <div style="flex: 1; text-align: left;">
-                                        <div class="product-preview-name">${product.name}</div>
+                                        <div class="product-preview-name">${this.escapeHtml(product.name)}</div>
                                         <div class="product-preview-price">${formatPrice(product.price)}</div>
                                     </div>
                                 </div>
@@ -1190,6 +1912,7 @@
                 }, 10);
             }
             
+            // Fermer le modal de connexion requise
             closeLoginRequiredModal() {
                 const modal = document.getElementById('loginRequiredModal');
                 if (modal) {
@@ -1201,15 +1924,15 @@
                 }
             }
             
-            // ============================================
-            // ===== TRAITEMENT DE L'ACHAT =====
-            // ============================================
+            // Traitement de l'achat
             async processPurchase(user, product) {
                 try {
-                    // Afficher le chargement
                     this.showNotification('🔄 Traitement de votre achat...', 'info');
                     
-                    // ENREGISTRER L'ACHAT DANS GOOGLE SHEETS
+                    // Simuler une requête asynchrone
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    
+                    // Envoyer à Google Sheets
                     await fetch(GOOGLE_SHEETS_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -1223,21 +1946,64 @@
                             prix: product.price,
                             date: new Date().toLocaleString('fr-FR')
                         })
+                    }).catch(() => {
+                        // Ignorer les erreurs CORS
                     });
                     
-                    // AFFICHER LA CONFIRMATION D'ACHAT
+                    // Mettre à jour le stock
+                    product.stock--;
+                    
+                    // Enregistrer la commande
+                    this.saveOrder(user, product);
+                    
+                    // Afficher la confirmation
                     this.showPurchaseConfirmation(product);
                     
                 } catch (error) {
-                    console.error('❌ Erreur:', error);
+                    console.error('❌ Erreur d\'achat:', error);
                     this.showNotification('❌ Erreur lors de l\'achat', 'error');
                 }
             }
             
-            // ============================================
-            // ===== CONFIRMATION D'ACHAT =====
-            // ============================================
+            // Enregistrer la commande
+            saveOrder(user, product) {
+                try {
+                    const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS)) || [];
+                    const userIndex = users.findIndex(u => u.id === user.id);
+                    
+                    if (userIndex !== -1) {
+                        if (!users[userIndex].orders) {
+                            users[userIndex].orders = [];
+                        }
+                        
+                        users[userIndex].orders.push({
+                            id: this.generateOrderId(),
+                            productId: product.id,
+                            productName: product.name,
+                            price: product.price,
+                            date: new Date().toISOString(),
+                            status: 'confirmé'
+                        });
+                        
+                        localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+                    }
+                } catch (error) {
+                    console.error('❌ Erreur lors de l\'enregistrement de la commande:', error);
+                }
+            }
+            
+            // Générer un ID de commande
+            generateOrderId() {
+                return 'CMD-' + Date.now().toString(36).toUpperCase() + '-' + 
+                       Math.random().toString(36).substring(2, 6).toUpperCase();
+            }
+            
+            // Afficher la confirmation d'achat
             showPurchaseConfirmation(product) {
+                if (!this.currentUser) return;
+                
+                this.closeAllModals();
+                
                 const modalHTML = `
                     <div class="modal" id="purchaseModal">
                         <div class="modal-content" style="max-width: 450px;">
@@ -1253,14 +2019,14 @@
                                         <i class="fas fa-check"></i>
                                     </div>
                                     
-                                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">
+                                    <h3 style="color: #2c3e50; margin-bottom: 15px;">
                                         Merci pour votre confiance !
                                     </h3>
                                     
                                     <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: left;">
                                         <p style="display: flex; justify-content: space-between; margin: 10px 0;">
                                             <strong>Produit :</strong> 
-                                            <span>${product.name}</span>
+                                            <span>${this.escapeHtml(product.name)}</span>
                                         </p>
                                         <p style="display: flex; justify-content: space-between; margin: 10px 0;">
                                             <strong>Prix :</strong> 
@@ -1268,11 +2034,11 @@
                                         </p>
                                         <p style="display: flex; justify-content: space-between; margin: 10px 0;">
                                             <strong>Client :</strong> 
-                                            <span>${this.currentUser.prenom} ${this.currentUser.nom}</span>
+                                            <span>${this.escapeHtml(this.currentUser.prenom)} ${this.escapeHtml(this.currentUser.nom)}</span>
                                         </p>
                                         <p style="display: flex; justify-content: space-between; margin: 10px 0;">
                                             <strong>Email :</strong> 
-                                            <span>${this.currentUser.email}</span>
+                                            <span>${this.escapeHtml(this.currentUser.email)}</span>
                                         </p>
                                     </div>
                                     
@@ -1285,7 +2051,7 @@
                                         <button class="btn btn-primary" style="flex: 1;" onclick="app.closePurchaseModal()">
                                             <i class="fas fa-check"></i> OK
                                         </button>
-                                        <a href="https://wa.me/22656323077" class="btn btn-secondary" style="flex: 1; text-align: center;" target="_blank">
+                                        <a href="https://wa.me/22656323077" class="btn btn-secondary" style="flex: 1; text-align: center;" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-whatsapp"></i> WhatsApp
                                         </a>
                                     </div>
@@ -1306,6 +2072,7 @@
                 }, 10);
             }
             
+            // Fermer le modal de confirmation d'achat
             closePurchaseModal() {
                 const modal = document.getElementById('purchaseModal');
                 if (modal) {
@@ -1318,378 +2085,10 @@
             }
             
             // ============================================
-            // ===== AUTHENTIFICATION =====
+            // ===== NOTIFICATIONS =====
             // ============================================
-            showAuthModal(tab = 'login') {
-                const oldModal = document.getElementById('authModal');
-                if (oldModal) oldModal.remove();
-                
-                const modalHTML = `
-                    <div class="modal" id="authModal">
-                        <div class="modal-content" style="max-width: 500px;">
-                            <div class="modal-header">
-                                <h3><i class="fas fa-user-circle"></i> Maison des Bonnes Chose</h3>
-                                <button class="close-modal" onclick="app.closeAuthModal()">×</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="auth-tabs">
-                                    <button class="auth-tab ${tab === 'login' ? 'active' : ''}" 
-                                            onclick="app.switchAuthTab('login')">
-                                        <i class="fas fa-sign-in-alt"></i> Se connecter
-                                    </button>
-                                    <button class="auth-tab ${tab === 'register' ? 'active' : ''}" 
-                                            onclick="app.switchAuthTab('register')">
-                                        <i class="fas fa-user-plus"></i> S'inscrire
-                                    </button>
-                                </div>
-                                
-                                <div class="auth-forms">
-                                    <form id="loginForm" class="auth-form ${tab === 'login' ? 'active' : ''}" 
-                                          onsubmit="app.login(event)">
-                                        <div class="form-group">
-                                            <label><i class="fas fa-envelope"></i> Email</label>
-                                            <input type="email" id="loginEmail" class="form-control" 
-                                                   placeholder="exemple@email.com" required>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label><i class="fas fa-lock"></i> Mot de passe</label>
-                                            <div class="password-input">
-                                                <input type="password" id="loginPassword" class="form-control" 
-                                                       placeholder="••••••••" required>
-                                                <button type="button" class="toggle-password" 
-                                                        onclick="app.togglePassword('loginPassword')">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
-                                            <i class="fas fa-sign-in-alt"></i> Se connecter
-                                        </button>
-                                        
-                                        <p style="text-align: center; margin-top: 20px; color: #666;">
-                                            Pas encore de compte ? 
-                                            <a href="#" onclick="app.switchAuthTab('register'); return false;" 
-                                               style="color: var(--secondary-color); font-weight: 600;">
-                                                S'inscrire
-                                            </a>
-                                        </p>
-                                    </form>
-                                    
-                                    <form id="registerForm" class="auth-form ${tab === 'register' ? 'active' : ''}" 
-                                          onsubmit="app.register(event)">
-                                        <div class="form-grid">
-                                            <div class="form-group">
-                                                <label><i class="fas fa-user"></i> Nom</label>
-                                                <input type="text" id="registerNom" class="form-control" 
-                                                       placeholder="Votre nom" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label><i class="fas fa-user"></i> Prénom</label>
-                                                <input type="text" id="registerPrenom" class="form-control" 
-                                                       placeholder="Votre prénom" required>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label><i class="fas fa-envelope"></i> Email</label>
-                                            <input type="email" id="registerEmail" class="form-control" 
-                                                   placeholder="exemple@email.com" required>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label><i class="fas fa-lock"></i> Mot de passe</label>
-                                            <div class="password-input">
-                                                <input type="password" id="registerPassword" class="form-control" 
-                                                       placeholder="Minimum 6 caractères" required>
-                                                <button type="button" class="toggle-password" 
-                                                        onclick="app.togglePassword('registerPassword')">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label><i class="fas fa-lock"></i> Confirmer</label>
-                                            <div class="password-input">
-                                                <input type="password" id="registerConfirmPassword" class="form-control" 
-                                                       placeholder="Confirmez" required>
-                                                <button type="button" class="toggle-password" 
-                                                        onclick="app.togglePassword('registerConfirmPassword')">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; background: linear-gradient(45deg, #e67e22, #d35400);">
-                                            <i class="fas fa-user-plus"></i> Créer mon compte
-                                        </button>
-                                        
-                                        <p style="text-align: center; margin-top: 20px; color: #666;">
-                                            Déjà inscrit ? 
-                                            <a href="#" onclick="app.switchAuthTab('login'); return false;" 
-                                               style="color: var(--secondary-color); font-weight: 600;">
-                                                Se connecter
-                                            </a>
-                                        </p>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                document.body.insertAdjacentHTML('beforeend', modalHTML);
-                
-                setTimeout(() => {
-                    const modal = document.getElementById('authModal');
-                    if (modal) {
-                        modal.classList.add('show');
-                        document.body.style.overflow = 'hidden';
-                        
-                        // Si on vient du modal de connexion requise, le fermer
-                        this.closeLoginRequiredModal();
-                    }
-                }, 10);
-            }
             
-            closeAuthModal() {
-                const modal = document.getElementById('authModal');
-                if (modal) {
-                    modal.classList.remove('show');
-                    setTimeout(() => {
-                        modal.remove();
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                }
-            }
-            
-            switchAuthTab(tab) {
-                const loginForm = document.getElementById('loginForm');
-                const registerForm = document.getElementById('registerForm');
-                const tabs = document.querySelectorAll('.auth-tab');
-                
-                if (!loginForm || !registerForm) return;
-                
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                if (tab === 'login') {
-                    tabs[0].classList.add('active');
-                    loginForm.classList.add('active');
-                    registerForm.classList.remove('active');
-                } else {
-                    tabs[1].classList.add('active');
-                    registerForm.classList.add('active');
-                    loginForm.classList.remove('active');
-                }
-            }
-            
-            togglePassword(fieldId) {
-                const field = document.getElementById(fieldId);
-                const icon = field.parentNode.querySelector('i');
-                
-                if (field.type === 'password') {
-                    field.type = 'text';
-                    icon.classList.remove('fa-eye');
-                    icon.classList.add('fa-eye-slash');
-                } else {
-                    field.type = 'password';
-                    icon.classList.remove('fa-eye-slash');
-                    icon.classList.add('fa-eye');
-                }
-            }
-            
-            async login(event) {
-                event.preventDefault();
-                
-                const email = document.getElementById('loginEmail').value;
-                const password = document.getElementById('loginPassword').value;
-                
-                if (!email || !password) {
-                    this.showNotification('❌ Veuillez remplir tous les champs', 'error');
-                    return;
-                }
-                
-                const users = JSON.parse(localStorage.getItem('Maison des Bonnes Chose_users')) || [];
-                const user = users.find(u => u.email === email);
-                
-                if (user) {
-                    this.currentUser = {
-                        id: user.id,
-                        nom: user.nom,
-                        prenom: user.prenom,
-                        email: user.email
-                    };
-                    
-                    localStorage.setItem('Maison des Bonnes Chose_user', JSON.stringify(this.currentUser));
-                    this.renderAuthButtons();
-                    this.closeAuthModal();
-                    this.showNotification('✅ Connexion réussie !', 'success');
-                    
-                } else {
-                    this.showNotification('❌ Email ou mot de passe incorrect', 'error');
-                }
-            }
-            
-            async register(event) {
-                event.preventDefault();
-                
-                const nom = document.getElementById('registerNom').value.trim();
-                const prenom = document.getElementById('registerPrenom').value.trim();
-                const email = document.getElementById('registerEmail').value.trim();
-                const password = document.getElementById('registerPassword').value;
-                const confirmPassword = document.getElementById('registerConfirmPassword').value;
-                
-                if (!nom || !prenom || !email || !password) {
-                    this.showNotification('❌ Tous les champs sont requis', 'error');
-                    return;
-                }
-                
-                if (password !== confirmPassword) {
-                    this.showNotification('❌ Les mots de passe ne correspondent pas', 'error');
-                    return;
-                }
-                
-                if (password.length < 6) {
-                    this.showNotification('❌ Le mot de passe doit contenir au moins 6 caractères', 'error');
-                    return;
-                }
-                
-                const users = JSON.parse(localStorage.getItem('Maison des Bonnes Chose_users')) || [];
-                const emailExists = users.find(u => u.email === email);
-                
-                if (emailExists) {
-                    this.showNotification('❌ Cet email est déjà inscrit', 'error');
-                    return;
-                }
-                
-                const submitBtn = event.submitter;
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Inscription...';
-                submitBtn.disabled = true;
-                
-                try {
-                    await fetch(GOOGLE_SHEETS_URL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            action: 'register',
-                            nom: nom,
-                            prenom: prenom,
-                            email: email,
-                            password: password,
-                            date: new Date().toLocaleString('fr-FR')
-                        })
-                    });
-                    
-                    const newUser = {
-                        id: "USER-" + Date.now().toString(36).toUpperCase(),
-                        nom: nom,
-                        prenom: prenom,
-                        email: email,
-                        date: new Date().toISOString()
-                    };
-                    
-                    users.push(newUser);
-                    localStorage.setItem('Maison des Bonnes Chose_users', JSON.stringify(users));
-                    
-                    this.currentUser = {
-                        id: newUser.id,
-                        nom: nom,
-                        prenom: prenom,
-                        email: email
-                    };
-                    
-                    localStorage.setItem('Maison des Bonnes Chose_user', JSON.stringify(this.currentUser));
-                    this.renderAuthButtons();
-                    this.closeAuthModal();
-                    this.showNotification('✅ Inscription réussie !', 'success');
-                    
-                } catch (error) {
-                    console.error('❌ Erreur:', error);
-                    this.showNotification('❌ Erreur lors de l\'inscription', 'error');
-                } finally {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }
-            }
-            
-            logout() {
-                this.currentUser = null;
-                localStorage.removeItem('Maison des Bonnes Chose_user');
-                this.renderAuthButtons();
-                this.showNotification('✅ Déconnexion réussie', 'success');
-            }
-            
-            showUserMenu() {
-                const menuHTML = `
-                    <div class="modal" id="userMenuModal">
-                        <div class="modal-content" style="max-width: 350px;">
-                            <div class="modal-header">
-                                <h3><i class="fas fa-user-circle"></i> Mon compte</h3>
-                                <button class="close-modal" onclick="app.closeUserMenu()">×</button>
-                            </div>
-                            <div class="modal-body">
-                                <div style="text-align: center; margin-bottom: 25px;">
-                                    <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #3498db, #2980b9); 
-                                         border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-                                         color: white; font-size: 2rem; margin: 0 auto 15px;">
-                                        ${this.currentUser?.prenom?.[0] || 'S'}${this.currentUser?.nom?.[0] || 'S'}
-                                    </div>
-                                    <h4 style="margin-bottom: 5px;">${this.currentUser?.prenom} ${this.currentUser?.nom}</h4>
-                                    <p style="color: #666; font-size: 0.9rem;">${this.currentUser?.email}</p>
-                                </div>
-                                
-                                <div style="display: flex; flex-direction: column; gap: 10px;">
-                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewProfile()">
-                                        <i class="fas fa-user-edit"></i> Modifier mon profil
-                                    </button>
-                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewOrders()">
-                                        <i class="fas fa-shopping-bag"></i> Mes achats
-                                    </button>
-                                    <button class="btn btn-primary" style="width: 100%; background: #e74c3c;" onclick="app.logout(); app.closeUserMenu();">
-                                        <i class="fas fa-sign-out-alt"></i> Déconnexion
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                document.body.insertAdjacentHTML('beforeend', menuHTML);
-                
-                setTimeout(() => {
-                    const modal = document.getElementById('userMenuModal');
-                    if (modal) {
-                        modal.classList.add('show');
-                        document.body.style.overflow = 'hidden';
-                    }
-                }, 10);
-            }
-            
-            closeUserMenu() {
-                const modal = document.getElementById('userMenuModal');
-                if (modal) {
-                    modal.classList.remove('show');
-                    setTimeout(() => {
-                        modal.remove();
-                        document.body.style.overflow = 'auto';
-                    }, 300);
-                }
-            }
-            
-            viewProfile() {
-                this.closeUserMenu();
-                this.showNotification('📝 Fonctionnalité en cours de développement', 'info');
-            }
-            
-            viewOrders() {
-                this.closeUserMenu();
-                this.showNotification('📦 Vos achats seront bientôt disponibles', 'info');
-            }
-            
+            // Afficher une notification
             showNotification(message, type = 'success') {
                 const notification = document.createElement('div');
                 notification.className = `notification ${type}`;
@@ -1697,10 +2096,29 @@
                 let icon = 'check-circle';
                 if (type === 'error') icon = 'exclamation-circle';
                 if (type === 'info') icon = 'info-circle';
+                if (type === 'warning') icon = 'exclamation-triangle';
                 
                 notification.innerHTML = `
                     <i class="fas fa-${icon}"></i>
                     <span>${message}</span>
+                `;
+                
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: ${type === 'success' ? '#27ae60' : type === 'error' ? '#e74c3c' : type === 'info' ? '#3498db' : '#f39c12'};
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    z-index: 10000;
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease;
+                    font-weight: 500;
                 `;
                 
                 document.body.appendChild(notification);
@@ -1709,48 +2127,92 @@
                 setTimeout(() => {
                     notification.classList.remove('show');
                     setTimeout(() => notification.remove(), 300);
-                }, 4000);
+                }, NOTIFICATION_DURATION);
             }
             
+            // ============================================
+            // ===== GESTION DES MODALS =====
+            // ============================================
+            
+            // Fermer tous les modals
+            closeAllModals() {
+                this.closeAuthModal();
+                this.closeLoginRequiredModal();
+                this.closePurchaseModal();
+                this.closeUserMenu();
+            }
+            
+            // Initialiser les événements
             initEventListeners() {
+                // Fermeture des modals en cliquant sur le fond
                 document.addEventListener('click', (e) => {
-                    const authModal = document.getElementById('authModal');
-                    if (authModal && e.target === authModal) {
-                        this.closeAuthModal();
-                    }
+                    const modals = [
+                        'authModal',
+                        'loginRequiredModal', 
+                        'purchaseModal',
+                        'userMenuModal'
+                    ];
                     
-                    const loginModal = document.getElementById('loginRequiredModal');
-                    if (loginModal && e.target === loginModal) {
-                        this.closeLoginRequiredModal();
-                    }
-                    
-                    const purchaseModal = document.getElementById('purchaseModal');
-                    if (purchaseModal && e.target === purchaseModal) {
-                        this.closePurchaseModal();
-                    }
-                    
-                    const userMenu = document.getElementById('userMenuModal');
-                    if (userMenu && e.target === userMenu) {
-                        this.closeUserMenu();
+                    modals.forEach(modalId => {
+                        const modal = document.getElementById(modalId);
+                        if (modal && e.target === modal) {
+                            switch(modalId) {
+                                case 'authModal':
+                                    this.closeAuthModal();
+                                    break;
+                                case 'loginRequiredModal':
+                                    this.closeLoginRequiredModal();
+                                    break;
+                                case 'purchaseModal':
+                                    this.closePurchaseModal();
+                                    break;
+                                case 'userMenuModal':
+                                    this.closeUserMenu();
+                                    break;
+                            }
+                        }
+                    });
+                });
+                
+                // Fermeture des modals avec Echap
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeAllModals();
                     }
                 });
                 
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        this.closeAuthModal();
-                        this.closeLoginRequiredModal();
-                        this.closePurchaseModal();
-                        this.closeUserMenu();
-                    }
-                });
+                // Gestion de la visibilité du header au scroll
+                let lastScrollTop = 0;
+                const header = document.querySelector('header');
+                
+                if (header) {
+                    window.addEventListener('scroll', () => {
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        
+                        if (scrollTop > lastScrollTop && scrollTop > 100) {
+                            header.classList.add('header-hidden');
+                        } else {
+                            header.classList.remove('header-hidden');
+                        }
+                        
+                        lastScrollTop = scrollTop;
+                    }, { passive: true });
+                }
             }
         }
 
-        // ===== INITIALISER L'APPLICATION =====
-        const app = new Maison des Bonnes ChoseApp();
+        // ============================================
+        // ===== 4. INITIALISATION DE L'APPLICATION =====
+        // ============================================
+        
+        // Créer l'instance de l'application
+        const app = new MaisonDesBonnesChosesApp();
         window.app = app;
 
-        // ===== SLIDER =====
+        // ============================================
+        // ===== 5. GESTION DU SLIDER HERO =====
+        // ============================================
+        
         const heroSlides = document.querySelectorAll('.hero-slide');
         const heroIndicators = document.getElementById('heroIndicators');
         const heroProgress = document.getElementById('heroProgress');
@@ -1758,65 +2220,89 @@
         let slideInterval;
         let progressInterval;
         let progressWidth = 0;
-        const SLIDE_DURATION = 5000;
-        const PROGRESS_STEP = 100 / (SLIDE_DURATION / 10);
-
+        let isSliderPaused = false;
+        
+        // Initialiser les indicateurs
         function initIndicators() {
-            if (!heroIndicators) return;
+            if (!heroIndicators || !heroSlides.length) return;
+            
             heroIndicators.innerHTML = '';
-            for (let i = 0; i < heroSlides.length; i++) {
+            
+            heroSlides.forEach((_, i) => {
                 const indicator = document.createElement('button');
                 indicator.className = `hero-indicator ${i === 0 ? 'active' : ''}`;
                 indicator.setAttribute('aria-label', `Image ${i + 1}`);
                 indicator.setAttribute('onclick', `window.goToSlide(${i})`);
                 heroIndicators.appendChild(indicator);
-            }
+            });
         }
-
+        
+        // Aller à un slide spécifique
         window.goToSlide = function(index) {
+            if (!heroSlides.length) return;
+            
             if (index < 0) index = heroSlides.length - 1;
             if (index >= heroSlides.length) index = 0;
             
-            heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-            document.querySelectorAll('.hero-indicator').forEach((indicator, i) => indicator.classList.toggle('active', i === index));
+            heroSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            
+            document.querySelectorAll('.hero-indicator').forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
             
             currentSlide = index;
             resetProgress();
         };
-
+        
+        // Slide suivant
         window.nextSlide = () => window.goToSlide(currentSlide + 1);
+        
+        // Slide précédent
         window.prevSlide = () => window.goToSlide(currentSlide - 1);
-
+        
+        // Réinitialiser la barre de progression
         function resetProgress() {
             progressWidth = 0;
             if (heroProgress) heroProgress.style.width = '0%';
         }
-
+        
+        // Démarrer le slide automatique
         function startAutoSlide() {
             if (slideInterval) clearInterval(slideInterval);
             if (progressInterval) clearInterval(progressInterval);
             
-            slideInterval = setInterval(() => window.nextSlide(), SLIDE_DURATION);
+            slideInterval = setInterval(() => {
+                if (!isSliderPaused) window.nextSlide();
+            }, SLIDE_DURATION);
+            
+            const PROGRESS_STEP = 100 / (SLIDE_DURATION / 10);
+            
             progressInterval = setInterval(() => {
-                if (heroProgress) {
+                if (!isSliderPaused && heroProgress) {
                     progressWidth += PROGRESS_STEP;
                     if (progressWidth >= 100) progressWidth = 0;
                     heroProgress.style.width = `${progressWidth}%`;
                 }
             }, 10);
         }
-
+        
+        // Pause auto slide
         function pauseAutoSlide() {
-            clearInterval(slideInterval);
-            clearInterval(progressInterval);
+            isSliderPaused = true;
         }
-
+        
+        // Reprendre auto slide
         function resumeAutoSlide() {
+            isSliderPaused = false;
             resetProgress();
-            startAutoSlide();
         }
-
+        
+        // Initialiser le slider
         function initHeroSlider() {
+            if (!heroSlides.length) return;
+            
             initIndicators();
             startAutoSlide();
             
@@ -1824,18 +2310,32 @@
             if (heroSection) {
                 heroSection.addEventListener('mouseenter', pauseAutoSlide);
                 heroSection.addEventListener('mouseleave', resumeAutoSlide);
+                
+                // Gestion du swipe tactile
+                let touchStartX = 0;
+                heroSection.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+                
+                heroSection.addEventListener('touchend', (e) => {
+                    const touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchEndX - touchStartX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            window.prevSlide();
+                        } else {
+                            window.nextSlide();
+                        }
+                    }
+                }, { passive: true });
             }
-            
-            let touchStartX = 0;
-            heroSection.addEventListener('touchstart', (e) => touchStartX = e.changedTouches[0].screenX, { passive: true });
-            heroSection.addEventListener('touchend', (e) => {
-                const touchEndX = e.changedTouches[0].screenX;
-                const diff = touchEndX - touchStartX;
-                if (Math.abs(diff) > 50) diff > 0 ? window.prevSlide() : window.nextSlide();
-            }, { passive: true });
         }
 
-        // ===== DONNÉES PRODUITS =====
+        // ============================================
+        // ===== 6. DONNÉES PRODUITS =====
+        // ============================================
+        
         window.productsData = [
             {
                 id: 1,
@@ -1851,13 +2351,13 @@
             },
             {
                 id: 2,
-                name: "images/produits/Galaxy A16.jpg",
+                name: "Samsung Galaxy S23",
                 category: "telephone",
                 subcategory: "Samsung",
                 description: "Neuf sous boîte, écran Dynamic AMOLED 6.1\", 256 Go",
                 price: 380000,
                 oldPrice: 420000,
-                image: "image/images/produits/Galaxy A16.jpg",
+                image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800",
                 badge: "Promo",
                 stock: 8
             },
@@ -1869,7 +2369,7 @@
                 description: "Neuf sous boîte, 6.78\", 8 Go RAM, 128 Go",
                 price: 125000,
                 oldPrice: 145000,
-                image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800",
+                image: "https://images.pexels.com/photos/163097/mobile-phone-smartphone-iphone-mobile-163097.jpeg?auto=compress&cs=tinysrgb&w=800",
                 badge: "Meilleur vente",
                 stock: 12
             },
@@ -1881,28 +2381,44 @@
                 description: "FM/AM avec Bluetooth, batterie longue durée 48h",
                 price: 25000,
                 oldPrice: 32000,
-                image: "https://images.pexels.com/photos/163097/mobile-phone-smartphone-iphone-mobile-163097.jpeg?auto=compress&cs=tinysrgb&w=800",
+                image: "https://images.pexels.com/photos/164797/pexels-photo-164797.jpeg?auto=compress&cs=tinysrgb&w=800",
                 badge: "Livraison gratuite",
                 stock: 20
             }
         ];
         
+        // Formater le prix
         function formatPrice(price) {
-            return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF', minimumFractionDigits: 0 }).format(price);
+            return new Intl.NumberFormat('fr-FR', { 
+                style: 'currency', 
+                currency: 'XOF', 
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(price);
         }
+        window.formatPrice = formatPrice;
         
-        // ===== CHARGER PRODUITS =====
+        // ============================================
+        // ===== 7. CHARGEMENT DES PRODUITS =====
+        // ============================================
+        
         function loadFeaturedProducts() {
             const container = document.getElementById('featuredProducts');
             if (!container) return;
             
             const featured = window.productsData.slice(0, 4);
             
-            container.innerHTML = featured.map(product => `
+            container.innerHTML = featured.map(product => {
+                // Vérifier si l'image est valide
+                const imageUrl = product.image && product.image.startsWith('http') 
+                    ? product.image 
+                    : 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800';
+                
+                return `
                 <div class="product-card">
                     ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
                     <div class="product-image">
-                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        <img src="${imageUrl}" alt="${product.name}" loading="lazy">
                     </div>
                     <div class="product-info">
                         <div class="product-category">${product.subcategory}</div>
@@ -1922,95 +2438,185 @@
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
         }
         
-        // ===== TÉMOIGNAGES =====
+        // ============================================
+        // ===== 8. TÉMOIGNAGES =====
+        // ============================================
+        
         let currentTestimonial = 0;
         const testimonials = document.querySelectorAll('.testimonial-card');
         
         function updateTestimonialSlider() {
             const track = document.getElementById('testimonialsTrack');
-            if (track && testimonials.length) track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+            if (track && testimonials.length) {
+                track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+            }
         }
         
         window.nextTestimonial = function() {
+            if (!testimonials.length) return;
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             updateTestimonialSlider();
         };
         
         window.prevTestimonial = function() {
+            if (!testimonials.length) return;
             currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
             updateTestimonialSlider();
         };
         
-        // ===== MENU MOBILE =====
+        // ============================================
+        // ===== 9. MENU MOBILE =====
+        // ============================================
+        
         function initMobileMenu() {
             const menuBtn = document.getElementById('mobileMenuBtn');
             const navContainer = document.getElementById('navContainer');
             const overlay = document.getElementById('mobileMenuOverlay');
+            
             if (!menuBtn || !navContainer) return;
             
             function toggleMenu() {
                 const isActive = navContainer.classList.contains('active');
                 navContainer.classList.toggle('active');
                 if (overlay) overlay.classList.toggle('active');
+                document.body.style.overflow = isActive ? 'auto' : 'hidden';
                 menuBtn.innerHTML = isActive ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
             }
             
             menuBtn.addEventListener('click', toggleMenu);
             if (overlay) overlay.addEventListener('click', toggleMenu);
             
+            // Fermer le menu quand on clique sur un lien
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navContainer.classList.remove('active');
                     if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                     menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 });
             });
+            
+            // Fermer le menu au redimensionnement
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    navContainer.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    if (menuBtn) menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
         }
         
-        // ===== ANIMATIONS SCROLL =====
+        // ============================================
+        // ===== 10. ANIMATIONS SCROLL =====
+        // ============================================
+        
         function initScrollAnimations() {
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible'));
-            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { 
+                threshold: 0.1, 
+                rootMargin: '0px 0px -50px 0px' 
+            });
             
-            document.querySelectorAll('.section').forEach(section => observer.observe(section));
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
         }
         
-        // ===== LIENS ANCRES =====
+        // ============================================
+        // ===== 11. LIENS ANCRES =====
+        // ============================================
+        
         function initAnchorLinks() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
+                    
                     if (targetId === '#') return;
+                    
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         const headerHeight = document.querySelector('header')?.offsetHeight || 80;
-                        window.scrollTo({ top: targetElement.offsetTop - headerHeight, behavior: 'smooth' });
+                        window.scrollTo({ 
+                            top: targetElement.offsetTop - headerHeight, 
+                            behavior: 'smooth' 
+                        });
                     }
                 });
             });
         }
         
-        // ===== INITIALISATION =====
+        // ============================================
+        // ===== 12. CHARGEMENT DES IMAGES =====
+        // ============================================
+        
+        function initLazyLoading() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.dataset.src;
+                            
+                            if (src) {
+                                img.src = src;
+                                img.removeAttribute('data-src');
+                            }
+                            
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        }
+        
+        // ============================================
+        // ===== 13. INITIALISATION GLOBALE =====
+        // ============================================
+        
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser les composants
             initHeroSlider();
-            setTimeout(() => {
-                const loadingScreen = document.getElementById('loadingScreen');
-                if (loadingScreen) loadingScreen.classList.add('hidden');
-            }, 800);
-            
             loadFeaturedProducts();
             updateTestimonialSlider();
             initMobileMenu();
             initScrollAnimations();
             initAnchorLinks();
+            initLazyLoading();
             
-            console.log('✅ Maison des Bonnes Chose prêt - Connexion obligatoire pour acheter');
+            // Cacher l'écran de chargement
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                }
+            }, 800);
+            
+            // Initialiser les erreurs d'images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    this.src = 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800';
+                    this.alt = 'Image par défaut';
+                });
+            });
+            
+            console.log('✅ Maison des Bonnes Choses - Application prête');
+            console.log('ℹ️ Connexion obligatoire pour effectuer des achats');
         });
     </script>
+  
 </body>
 </html>
