@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="css/responsive.css">
     
     <!-- ===== LOGO - FAVICON ===== -->
-    <!-- ICI LE LOGO EST CORRECTEMENT PLACÉ COMME FAVICON -->
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
     <link rel="apple-touch-icon" href="images/logo.jpg">
@@ -128,6 +127,406 @@
             
             .logo-text span {
                 font-size: 0.7rem;
+            }
+        }
+
+        /* ===== STYLES AMÉLIORÉS POUR LE MENU PROFESSIONNEL ===== */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e67e22;
+            --success: #27ae60;
+            --danger: #e74c3c;
+            --light: #ecf0f1;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-lg: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Structure du header */
+        header {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            height: 90px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Navigation principale */
+        .nav-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 5px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(52,152,219,0.3);
+        }
+
+        .nav-link i {
+            font-size: 1.1rem;
+        }
+
+        /* Menu déroulant (dropdown) */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 15px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: var(--secondary);
+            padding-left: 25px;
+        }
+
+        .dropdown-menu i {
+            width: 20px;
+            color: var(--secondary);
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 8px 0;
+        }
+
+        /* Actions du header */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Boutons d'authentification */
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-auth {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-auth-login {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-auth-login:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-auth-register {
+            background: linear-gradient(45deg, #e67e22, #d35400);
+            color: white;
+            box-shadow: 0 5px 15px rgba(230,126,34,0.3);
+        }
+
+        .btn-auth-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230,126,34,0.4);
+        }
+
+        .btn-auth-user {
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-auth-user:hover {
+            background: #2ecc71;
+            transform: translateY(-2px);
+        }
+
+        .btn-auth-logout {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-auth-logout:hover {
+            border-color: #e74c3c;
+            color: #e74c3c;
+            transform: translateY(-2px);
+        }
+
+        /* Menu mobile */
+        .mobile-menu-btn {
+            display: none;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .mobile-menu-btn.active {
+            background: var(--secondary);
+            transform: rotate(90deg);
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-link span {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 85%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 100px 20px 30px;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                overflow-y: auto;
+                margin: 0;
+            }
+
+            .nav-container.active {
+                right: 0;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+
+            .nav-item {
+                width: 100%;
+                opacity: 0;
+                transform: translateX(20px);
+                transition: all 0.3s ease;
+            }
+
+            .nav-container.active .nav-item {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .nav-item:nth-child(1) { transition-delay: 0.1s; }
+            .nav-item:nth-child(2) { transition-delay: 0.15s; }
+            .nav-item:nth-child(3) { transition-delay: 0.2s; }
+            .nav-item:nth-child(4) { transition-delay: 0.25s; }
+            .nav-item:nth-child(5) { transition-delay: 0.3s; }
+            .nav-item:nth-child(6) { transition-delay: 0.35s; }
+
+            .nav-link {
+                padding: 15px 20px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 12px;
+                width: 100%;
+            }
+
+            .nav-link:hover {
+                background: rgba(255,255,255,0.1);
+                transform: translateX(5px);
+            }
+
+            .dropdown-menu {
+                position: static;
+                background: rgba(0,0,0,0.2);
+                box-shadow: none;
+                padding: 10px 0 10px 20px;
+                margin-top: 5px;
+                border-radius: 8px;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+            }
+
+            .nav-item.active .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                color: rgba(255,255,255,0.8);
+                padding: 10px 15px;
+            }
+
+            .dropdown-menu a:hover {
+                background: rgba(255,255,255,0.1);
+                color: white;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .auth-buttons {
+                margin-left: auto;
+            }
+
+            .btn-auth span {
+                display: none;
+            }
+
+            .btn-auth i {
+                margin: 0;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-buttons {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                flex-direction: column;
+                z-index: 1001;
+            }
+            
+            .btn-auth {
+                background: var(--primary);
+                box-shadow: var(--shadow-lg);
+                padding: 12px 18px;
+            }
+            
+            .btn-auth span {
+                display: inline;
+            }
+            
+            .floating-buttons {
+                bottom: 100px;
             }
         }
         
@@ -284,92 +683,6 @@
             background: white;
             color: #2c3e50;
             border-color: white;
-        }
-        
-        /* ===== STYLES POUR L'AUTHENTIFICATION ===== */
-        .auth-buttons {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .btn-auth {
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-        }
-        
-        .btn-auth-login {
-            background: transparent;
-            color: white;
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .btn-auth-login:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
-            transform: translateY(-2px);
-        }
-        
-        .btn-auth-register {
-            background: linear-gradient(45deg, #e67e22, #d35400);
-            color: white;
-            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
-        }
-        
-        .btn-auth-register:hover {
-            background: linear-gradient(45deg, #d35400, #e67e22);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
-        }
-        
-        .btn-auth-user {
-            background: #27ae60;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-auth-user:hover {
-            background: #2ecc71;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
-        }
-        
-        .btn-auth-logout {
-            background: transparent;
-            color: white;
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-auth-logout:hover {
-            background: rgba(231, 76, 60, 0.2);
-            border-color: #e74c3c;
-            color: #e74c3c;
-            transform: translateY(-2px);
         }
         
         /* ===== STYLES POUR BOUTON ACHETER ===== */
@@ -572,58 +885,6 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @media (max-width: 768px) {
-            .auth-buttons {
-                gap: 8px;
-            }
-            
-            .btn-auth {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-            
-            .btn-auth span {
-                display: none;
-            }
-            
-            .btn-auth i {
-                margin: 0;
-            }
-            
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .product-preview {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .auth-buttons {
-                position: fixed;
-                bottom: 30px;
-                right: 20px;
-                flex-direction: column;
-                z-index: 999;
-            }
-            
-            .btn-auth {
-                background: #2c3e50;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                padding: 12px 18px;
-            }
-            
-            .btn-auth span {
-                display: inline;
-            }
-            
-            .floating-buttons {
-                bottom: 100px;
-            }
         }
         
         .hero-slider-indicators {
@@ -831,11 +1092,11 @@
         <h2 style="color: white;">Chargement Maison des Bonnes Choses...</h2>
     </div>
 
-    <!-- Header -->
+    <!-- Header avec menu professionnel -->
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- ===== LOGO - ICI LE LOGO EST CORRECTEMENT PLACÉ ===== -->
+                <!-- LOGO -->
                 <a href="index.html" class="logo-link">
                     <img src="images/logo.jpg" alt="Maison des Bonnes Choses Banfora" class="logo-img">
                     <div class="logo-text">
@@ -844,32 +1105,74 @@
                     </div>
                 </a>
 
-                <!-- Navigation -->
+                <!-- Navigation principale structurée -->
                 <nav class="nav-container" id="navContainer">
                     <ul class="nav-menu">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link active">
-                                <i class="fas fa-home"></i> Accueil
+                                <i class="fas fa-home"></i> 
+                                <span>Accueil</span>
                             </a>
                         </li>
+                        
                         <li class="nav-item">
                             <a href="produits.html" class="nav-link">
-                                <i class="fas fa-tag"></i> Produits
+                                <i class="fas fa-mobile-alt"></i> 
+                                <span>Téléphones</span>
+                                <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
                             </a>
+                            <!-- Sous-menu Téléphones -->
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-apple-alt"></i> iPhone</a>
+                                <a href="#"><i class="fas fa-mobile-alt"></i> Samsung</a>
+                                <a href="#"><i class="fas fa-mobile-alt"></i> Infinix</a>
+                                <a href="#"><i class="fas fa-mobile-alt"></i> Tecno</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="produits.html"><i class="fas fa-gem"></i> Tous les produits</a>
+                            </div>
                         </li>
+
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
-                                <i class="fas fa-phone-alt"></i> Contact
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-headphones"></i> 
+                                <span>Accessoires</span>
+                                <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
                             </a>
+                            <!-- Sous-menu Accessoires -->
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-headphones"></i> Écouteurs</a>
+                                <a href="#"><i class="fas fa-bolt"></i> Chargeurs</a>
+                                <a href="#"><i class="fas fa-shield-alt"></i> Coques</a>
+                                <a href="#"><i class="fas fa-battery-full"></i> Power banks</a>
+                            </div>
                         </li>
+
                         <li class="nav-item">
                             <a href="#services" class="nav-link">
-                                <i class="fas fa-tools"></i> Services
+                                <i class="fas fa-tools"></i> 
+                                <span>Services</span>
+                                <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+                            </a>
+                            <!-- Sous-menu Services -->
+                            <div class="dropdown-menu">
+                                <a href="#"><i class="fas fa-tools"></i> Réparation</a>
+                                <a href="#"><i class="fas fa-sync-alt"></i> Échange</a>
+                                <a href="#"><i class="fas fa-truck"></i> Livraison</a>
+                                <a href="#"><i class="fas fa-shield-alt"></i> Garantie</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="fas fa-phone-alt"></i> 
+                                <span>Contact</span>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a href="#about" class="nav-link">
-                                <i class="fas fa-info-circle"></i> À propos
+                                <i class="fas fa-info-circle"></i> 
+                                <span>À propos</span>
                             </a>
                         </li>
                     </ul>
@@ -877,7 +1180,7 @@
 
                 <!-- Actions -->
                 <div class="header-actions">
-                    <!-- AUTHENTIFICATION - DEUX BOUTONS VISIBLES -->
+                    <!-- AUTHENTIFICATION -->
                     <div class="auth-buttons" id="authButtons">
                         <!-- Les boutons seront générés dynamiquement -->
                     </div>
@@ -1214,18 +1517,11 @@
         </a>
     </div>
 
-   <script>
-        // ============================================
-        // ===== CORRECTION DU NOM DE LA BOUTIQUE =====
-        // ============================================
-        // Changement de "Maison des Bonnes Chose" à "Maison des Bonnes Choses"
-        // Correction orthographique sur tout le site
-        
+    <script>
         // ============================================
         // ===== 1. CONFIGURATION GOOGLE SHEETS =====
         // ============================================
-        // 🔴 REMPLACEZ CETTE URL PAR LA VÔTRE !
-        const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwX5flW7-1AqoKjUE5LCvzSENEnEfa7D7VoGz6RdJL3N65F8twst-q2EKfRXDBWRj4j/exec';
+        const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz0V05FHN9kIazlTR9LdfxE5-Q16GxhlhFIIXGcLF2MgYX1ZshanAxFyfiO0LiYbxK_/exec';
         
         // ============================================
         // ===== 2. CONSTANTES ET CONFIGURATION =====
@@ -1251,7 +1547,6 @@
                 this.init();
             }
             
-            // Initialisation principale
             init() {
                 this.loadUser();
                 this.renderAuthButtons();
@@ -1260,14 +1555,12 @@
                 this.loadCart();
             }
             
-            // Base de données utilisateurs (localStorage)
             initUserDatabase() {
                 if (!localStorage.getItem(STORAGE_KEYS.USERS)) {
                     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify([]));
                 }
             }
             
-            // Charger l'utilisateur connecté
             loadUser() {
                 const savedUser = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
                 if (savedUser) {
@@ -1279,41 +1572,35 @@
                 }
             }
             
-            // Charger le panier
             loadCart() {
                 if (!localStorage.getItem(STORAGE_KEYS.CART)) {
                     localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify([]));
                 }
             }
             
-            // ============================================
-            // ===== GESTION DE L'AUTHENTIFICATION =====
-            // ============================================
-            
-            // Afficher les boutons d'authentification
             renderAuthButtons() {
                 const container = document.getElementById('authButtons');
                 if (!container) return;
                 
                 if (this.currentUser) {
                     container.innerHTML = `
-                        <div class="btn-auth-user" onclick="app.showUserMenu()">
+                        <div class="btn-auth-user" onclick="window.app.showUserMenu()">
                             <i class="fas fa-user-circle"></i>
                             <span>${this.escapeHtml(this.currentUser.prenom || 'Compte')}</span>
                             <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
                         </div>
-                        <button class="btn-auth-logout" onclick="app.logout()">
+                        <button class="btn-auth-logout" onclick="window.app.logout()">
                             <i class="fas fa-sign-out-alt"></i>
                             <span>Déconnexion</span>
                         </button>
                     `;
                 } else {
                     container.innerHTML = `
-                        <button class="btn-auth btn-auth-login" onclick="app.showAuthModal('login')">
+                        <button class="btn-auth btn-auth-login" onclick="window.app.showAuthModal('login')">
                             <i class="fas fa-sign-in-alt"></i>
                             <span>Se connecter</span>
                         </button>
-                        <button class="btn-auth btn-auth-register" onclick="app.showAuthModal('register')">
+                        <button class="btn-auth btn-auth-register" onclick="window.app.showAuthModal('register')">
                             <i class="fas fa-user-plus"></i>
                             <span>S'inscrire</span>
                         </button>
@@ -1321,7 +1608,6 @@
                 }
             }
             
-            // Échapper les caractères HTML pour éviter XSS
             escapeHtml(text) {
                 if (!text) return '';
                 const div = document.createElement('div');
@@ -1329,7 +1615,6 @@
                 return div.innerHTML;
             }
             
-            // Afficher le modal d'authentification
             showAuthModal(tab = 'login') {
                 this.closeAllModals();
                 
@@ -1338,16 +1623,16 @@
                         <div class="modal-content" style="max-width: 500px;">
                             <div class="modal-header">
                                 <h3><i class="fas fa-user-circle"></i> Maison des Bonnes Choses</h3>
-                                <button class="close-modal" onclick="app.closeAuthModal()">×</button>
+                                <button class="close-modal" onclick="window.app.closeAuthModal()">×</button>
                             </div>
                             <div class="modal-body">
                                 <div class="auth-tabs">
                                     <button class="auth-tab ${tab === 'login' ? 'active' : ''}" 
-                                            onclick="app.switchAuthTab('login')">
+                                            onclick="window.app.switchAuthTab('login')">
                                         <i class="fas fa-sign-in-alt"></i> Se connecter
                                     </button>
                                     <button class="auth-tab ${tab === 'register' ? 'active' : ''}" 
-                                            onclick="app.switchAuthTab('register')">
+                                            onclick="window.app.switchAuthTab('register')">
                                         <i class="fas fa-user-plus"></i> S'inscrire
                                     </button>
                                 </div>
@@ -1373,11 +1658,10 @@
                 }, 10);
             }
             
-            // Formulaire de connexion
             renderLoginForm(tab) {
                 return `
                     <form id="loginForm" class="auth-form ${tab === 'login' ? 'active' : ''}" 
-                          onsubmit="app.login(event)">
+                          onsubmit="window.app.login(event)">
                         <div class="form-group">
                             <label><i class="fas fa-envelope"></i> Email</label>
                             <input type="email" id="loginEmail" class="form-control" 
@@ -1390,7 +1674,7 @@
                                 <input type="password" id="loginPassword" class="form-control" 
                                        placeholder="••••••••" required autocomplete="current-password">
                                 <button type="button" class="toggle-password" 
-                                        onclick="app.togglePassword('loginPassword')">
+                                        onclick="window.app.togglePassword('loginPassword')">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -1402,7 +1686,7 @@
                         
                         <p style="text-align: center; margin-top: 20px; color: #666;">
                             Pas encore de compte ? 
-                            <a href="#" onclick="app.switchAuthTab('register'); return false;" 
+                            <a href="#" onclick="window.app.switchAuthTab('register'); return false;" 
                                style="color: #3498db; font-weight: 600;">
                                 S'inscrire
                             </a>
@@ -1411,11 +1695,10 @@
                 `;
             }
             
-            // Formulaire d'inscription
             renderRegisterForm(tab) {
                 return `
                     <form id="registerForm" class="auth-form ${tab === 'register' ? 'active' : ''}" 
-                          onsubmit="app.register(event)">
+                          onsubmit="window.app.register(event)">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label><i class="fas fa-user"></i> Nom</label>
@@ -1442,7 +1725,7 @@
                                        placeholder="Minimum 6 caractères" required 
                                        autocomplete="new-password" minlength="${MIN_PASSWORD_LENGTH}">
                                 <button type="button" class="toggle-password" 
-                                        onclick="app.togglePassword('registerPassword')">
+                                        onclick="window.app.togglePassword('registerPassword')">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -1454,7 +1737,7 @@
                                 <input type="password" id="registerConfirmPassword" class="form-control" 
                                        placeholder="Confirmez" required autocomplete="new-password">
                                 <button type="button" class="toggle-password" 
-                                        onclick="app.togglePassword('registerConfirmPassword')">
+                                        onclick="window.app.togglePassword('registerConfirmPassword')">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -1463,7 +1746,7 @@
                         <div class="form-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="acceptTerms" required>
-                                <span>J'accepte les <a href="#" onclick="app.showTerms()">conditions générales</a></span>
+                                <span>J'accepte les <a href="#" onclick="window.app.showTerms()">conditions générales</a></span>
                             </label>
                         </div>
                         
@@ -1473,7 +1756,7 @@
                         
                         <p style="text-align: center; margin-top: 20px; color: #666;">
                             Déjà inscrit ? 
-                            <a href="#" onclick="app.switchAuthTab('login'); return false;" 
+                            <a href="#" onclick="window.app.switchAuthTab('login'); return false;" 
                                style="color: #3498db; font-weight: 600;">
                                 Se connecter
                             </a>
@@ -1482,12 +1765,10 @@
                 `;
             }
             
-            // Afficher les conditions générales
             showTerms() {
                 this.showNotification('📄 Conditions générales en cours de chargement...', 'info');
             }
             
-            // Fermer le modal d'authentification
             closeAuthModal() {
                 const modal = document.getElementById('authModal');
                 if (modal) {
@@ -1499,7 +1780,6 @@
                 }
             }
             
-            // Changer d'onglet
             switchAuthTab(tab) {
                 const loginForm = document.getElementById('loginForm');
                 const registerForm = document.getElementById('registerForm');
@@ -1520,7 +1800,6 @@
                 }
             }
             
-            // Afficher/masquer mot de passe
             togglePassword(fieldId) {
                 const field = document.getElementById(fieldId);
                 if (!field) return;
@@ -1539,7 +1818,6 @@
                 }
             }
             
-            // Connexion
             async login(event) {
                 event.preventDefault();
                 
@@ -1579,7 +1857,6 @@
                         this.closeAuthModal();
                         this.showNotification('✅ Connexion réussie !', 'success');
                         
-                        // Si un produit était en attente
                         if (this.pendingProduct) {
                             setTimeout(() => {
                                 this.processPurchase(this.currentUser, this.pendingProduct);
@@ -1601,13 +1878,10 @@
                 }
             }
             
-            // Hash simple du mot de passe (à remplacer par un vrai hash en production)
             hashPassword(password) {
-                // Simulation de hash - À NE PAS UTILISER EN PRODUCTION
                 return btoa(password);
             }
             
-            // Inscription
             async register(event) {
                 event.preventDefault();
                 
@@ -1620,7 +1894,6 @@
                 const confirmPassword = document.getElementById('registerConfirmPassword')?.value;
                 const acceptTerms = document.getElementById('acceptTerms')?.checked;
                 
-                // Validation
                 if (!nom || !prenom || !email || !password) {
                     this.showNotification('❌ Tous les champs sont requis', 'error');
                     return;
@@ -1664,7 +1937,6 @@
                         return;
                     }
                     
-                    // Envoyer à Google Sheets (mode no-cors)
                     await fetch(GOOGLE_SHEETS_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -1677,11 +1949,8 @@
                             password: this.hashPassword(password),
                             date: new Date().toLocaleString('fr-FR')
                         })
-                    }).catch(() => {
-                        // Ignorer les erreurs CORS
-                    });
+                    }).catch(() => {});
                     
-                    // Créer le nouvel utilisateur
                     const newUser = {
                         id: this.generateUserId(),
                         nom: nom,
@@ -1695,7 +1964,6 @@
                     users.push(newUser);
                     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
                     
-                    // Connecter automatiquement
                     this.currentUser = {
                         id: newUser.id,
                         nom: nom,
@@ -1720,19 +1988,16 @@
                 }
             }
             
-            // Générer un ID utilisateur unique
             generateUserId() {
                 return 'USER-' + Date.now().toString(36).toUpperCase() + '-' + 
                        Math.random().toString(36).substring(2, 6).toUpperCase();
             }
             
-            // Valider format email
             validateEmail(email) {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return re.test(email);
             }
             
-            // Déconnexion
             logout() {
                 this.currentUser = null;
                 this.pendingProduct = null;
@@ -1741,11 +2006,6 @@
                 this.showNotification('✅ Déconnexion réussie', 'success');
             }
             
-            // ============================================
-            // ===== MENU UTILISATEUR =====
-            // ============================================
-            
-            // Afficher le menu utilisateur
             showUserMenu() {
                 if (!this.currentUser) return;
                 
@@ -1758,7 +2018,7 @@
                         <div class="modal-content" style="max-width: 350px;">
                             <div class="modal-header">
                                 <h3><i class="fas fa-user-circle"></i> Mon compte</h3>
-                                <button class="close-modal" onclick="app.closeUserMenu()">×</button>
+                                <button class="close-modal" onclick="window.app.closeUserMenu()">×</button>
                             </div>
                             <div class="modal-body">
                                 <div style="text-align: center; margin-bottom: 25px;">
@@ -1772,13 +2032,13 @@
                                 </div>
                                 
                                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewProfile()">
+                                    <button class="btn btn-secondary" style="width: 100%;" onclick="window.app.viewProfile()">
                                         <i class="fas fa-user-edit"></i> Modifier mon profil
                                     </button>
-                                    <button class="btn btn-secondary" style="width: 100%;" onclick="app.viewOrders()">
+                                    <button class="btn btn-secondary" style="width: 100%;" onclick="window.app.viewOrders()">
                                         <i class="fas fa-shopping-bag"></i> Mes achats
                                     </button>
-                                    <button class="btn btn-primary" style="width: 100%; background: #e74c3c;" onclick="app.logout(); app.closeUserMenu();">
+                                    <button class="btn btn-primary" style="width: 100%; background: #e74c3c;" onclick="window.app.logout(); window.app.closeUserMenu();">
                                         <i class="fas fa-sign-out-alt"></i> Déconnexion
                                     </button>
                                 </div>
@@ -1798,7 +2058,6 @@
                 }, 10);
             }
             
-            // Fermer le menu utilisateur
             closeUserMenu() {
                 const modal = document.getElementById('userMenuModal');
                 if (modal) {
@@ -1810,23 +2069,16 @@
                 }
             }
             
-            // Voir le profil (à implémenter)
             viewProfile() {
                 this.closeUserMenu();
                 this.showNotification('📝 Fonctionnalité en cours de développement', 'info');
             }
             
-            // Voir les commandes (à implémenter)
             viewOrders() {
                 this.closeUserMenu();
                 this.showNotification('📦 Vos achats seront bientôt disponibles', 'info');
             }
             
-            // ============================================
-            // ===== GESTION DES ACHATS =====
-            // ============================================
-            
-            // Acheter un produit
             async buyProduct(productId) {
                 const product = window.productsData.find(p => p.id === productId);
                 if (!product) {
@@ -1834,24 +2086,20 @@
                     return;
                 }
                 
-                // Vérifier le stock
                 if (product.stock <= 0) {
                     this.showNotification('❌ Produit en rupture de stock', 'error');
                     return;
                 }
                 
-                // Vérifier si l'utilisateur est connecté
                 if (!this.currentUser) {
                     this.pendingProduct = product;
                     this.showLoginRequiredModal(product);
                     return;
                 }
                 
-                // Utilisateur connecté - Procéder à l'achat
                 await this.processPurchase(this.currentUser, product);
             }
             
-            // Modal : Connexion requise
             showLoginRequiredModal(product) {
                 this.closeAllModals();
                 
@@ -1860,7 +2108,7 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background: linear-gradient(45deg, #e67e22, #d35400);">
                                 <h3><i class="fas fa-lock"></i> Connexion requise</h3>
-                                <button class="close-modal" onclick="app.closeLoginRequiredModal()">×</button>
+                                <button class="close-modal" onclick="window.app.closeLoginRequiredModal()">×</button>
                             </div>
                             <div class="modal-body">
                                 <div class="login-required-icon">
@@ -1884,10 +2132,10 @@
                                 </div>
                                 
                                 <div style="display: flex; gap: 15px; margin-top: 25px;">
-                                    <button class="btn btn-primary" style="flex: 1;" onclick="app.showAuthModal('login')">
+                                    <button class="btn btn-primary" style="flex: 1;" onclick="window.app.showAuthModal('login')">
                                         <i class="fas fa-sign-in-alt"></i> Se connecter
                                     </button>
-                                    <button class="btn btn-secondary" style="flex: 1;" onclick="app.showAuthModal('register')">
+                                    <button class="btn btn-secondary" style="flex: 1;" onclick="window.app.showAuthModal('register')">
                                         <i class="fas fa-user-plus"></i> S'inscrire
                                     </button>
                                 </div>
@@ -1912,7 +2160,6 @@
                 }, 10);
             }
             
-            // Fermer le modal de connexion requise
             closeLoginRequiredModal() {
                 const modal = document.getElementById('loginRequiredModal');
                 if (modal) {
@@ -1924,15 +2171,12 @@
                 }
             }
             
-            // Traitement de l'achat
             async processPurchase(user, product) {
                 try {
                     this.showNotification('🔄 Traitement de votre achat...', 'info');
                     
-                    // Simuler une requête asynchrone
                     await new Promise(resolve => setTimeout(resolve, 1000));
                     
-                    // Envoyer à Google Sheets
                     await fetch(GOOGLE_SHEETS_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -1946,17 +2190,10 @@
                             prix: product.price,
                             date: new Date().toLocaleString('fr-FR')
                         })
-                    }).catch(() => {
-                        // Ignorer les erreurs CORS
-                    });
+                    }).catch(() => {});
                     
-                    // Mettre à jour le stock
                     product.stock--;
-                    
-                    // Enregistrer la commande
                     this.saveOrder(user, product);
-                    
-                    // Afficher la confirmation
                     this.showPurchaseConfirmation(product);
                     
                 } catch (error) {
@@ -1965,7 +2202,6 @@
                 }
             }
             
-            // Enregistrer la commande
             saveOrder(user, product) {
                 try {
                     const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS)) || [];
@@ -1992,13 +2228,11 @@
                 }
             }
             
-            // Générer un ID de commande
             generateOrderId() {
                 return 'CMD-' + Date.now().toString(36).toUpperCase() + '-' + 
                        Math.random().toString(36).substring(2, 6).toUpperCase();
             }
             
-            // Afficher la confirmation d'achat
             showPurchaseConfirmation(product) {
                 if (!this.currentUser) return;
                 
@@ -2009,7 +2243,7 @@
                         <div class="modal-content" style="max-width: 450px;">
                             <div class="modal-header" style="background: linear-gradient(45deg, #27ae60, #2ecc71);">
                                 <h3><i class="fas fa-check-circle"></i> Achat confirmé !</h3>
-                                <button class="close-modal" onclick="app.closePurchaseModal()">×</button>
+                                <button class="close-modal" onclick="window.app.closePurchaseModal()">×</button>
                             </div>
                             <div class="modal-body">
                                 <div style="text-align: center; padding: 20px;">
@@ -2048,7 +2282,7 @@
                                     </p>
                                     
                                     <div style="display: flex; gap: 15px;">
-                                        <button class="btn btn-primary" style="flex: 1;" onclick="app.closePurchaseModal()">
+                                        <button class="btn btn-primary" style="flex: 1;" onclick="window.app.closePurchaseModal()">
                                             <i class="fas fa-check"></i> OK
                                         </button>
                                         <a href="https://wa.me/22656323077" class="btn btn-secondary" style="flex: 1; text-align: center;" target="_blank" rel="noopener noreferrer">
@@ -2072,7 +2306,6 @@
                 }, 10);
             }
             
-            // Fermer le modal de confirmation d'achat
             closePurchaseModal() {
                 const modal = document.getElementById('purchaseModal');
                 if (modal) {
@@ -2084,11 +2317,6 @@
                 }
             }
             
-            // ============================================
-            // ===== NOTIFICATIONS =====
-            // ============================================
-            
-            // Afficher une notification
             showNotification(message, type = 'success') {
                 const notification = document.createElement('div');
                 notification.className = `notification ${type}`;
@@ -2130,11 +2358,6 @@
                 }, NOTIFICATION_DURATION);
             }
             
-            // ============================================
-            // ===== GESTION DES MODALS =====
-            // ============================================
-            
-            // Fermer tous les modals
             closeAllModals() {
                 this.closeAuthModal();
                 this.closeLoginRequiredModal();
@@ -2142,9 +2365,7 @@
                 this.closeUserMenu();
             }
             
-            // Initialiser les événements
             initEventListeners() {
-                // Fermeture des modals en cliquant sur le fond
                 document.addEventListener('click', (e) => {
                     const modals = [
                         'authModal',
@@ -2174,14 +2395,12 @@
                     });
                 });
                 
-                // Fermeture des modals avec Echap
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape') {
                         this.closeAllModals();
                     }
                 });
                 
-                // Gestion de la visibilité du header au scroll
                 let lastScrollTop = 0;
                 const header = document.querySelector('header');
                 
@@ -2205,7 +2424,6 @@
         // ===== 4. INITIALISATION DE L'APPLICATION =====
         // ============================================
         
-        // Créer l'instance de l'application
         const app = new MaisonDesBonnesChosesApp();
         window.app = app;
 
@@ -2222,7 +2440,6 @@
         let progressWidth = 0;
         let isSliderPaused = false;
         
-        // Initialiser les indicateurs
         function initIndicators() {
             if (!heroIndicators || !heroSlides.length) return;
             
@@ -2237,7 +2454,6 @@
             });
         }
         
-        // Aller à un slide spécifique
         window.goToSlide = function(index) {
             if (!heroSlides.length) return;
             
@@ -2256,19 +2472,14 @@
             resetProgress();
         };
         
-        // Slide suivant
         window.nextSlide = () => window.goToSlide(currentSlide + 1);
-        
-        // Slide précédent
         window.prevSlide = () => window.goToSlide(currentSlide - 1);
         
-        // Réinitialiser la barre de progression
         function resetProgress() {
             progressWidth = 0;
             if (heroProgress) heroProgress.style.width = '0%';
         }
         
-        // Démarrer le slide automatique
         function startAutoSlide() {
             if (slideInterval) clearInterval(slideInterval);
             if (progressInterval) clearInterval(progressInterval);
@@ -2288,18 +2499,15 @@
             }, 10);
         }
         
-        // Pause auto slide
         function pauseAutoSlide() {
             isSliderPaused = true;
         }
         
-        // Reprendre auto slide
         function resumeAutoSlide() {
             isSliderPaused = false;
             resetProgress();
         }
         
-        // Initialiser le slider
         function initHeroSlider() {
             if (!heroSlides.length) return;
             
@@ -2311,7 +2519,6 @@
                 heroSection.addEventListener('mouseenter', pauseAutoSlide);
                 heroSection.addEventListener('mouseleave', resumeAutoSlide);
                 
-                // Gestion du swipe tactile
                 let touchStartX = 0;
                 heroSection.addEventListener('touchstart', (e) => {
                     touchStartX = e.changedTouches[0].screenX;
@@ -2387,7 +2594,6 @@
             }
         ];
         
-        // Formater le prix
         function formatPrice(price) {
             return new Intl.NumberFormat('fr-FR', { 
                 style: 'currency', 
@@ -2398,10 +2604,6 @@
         }
         window.formatPrice = formatPrice;
         
-        // ============================================
-        // ===== 7. CHARGEMENT DES PRODUITS =====
-        // ============================================
-        
         function loadFeaturedProducts() {
             const container = document.getElementById('featuredProducts');
             if (!container) return;
@@ -2409,7 +2611,6 @@
             const featured = window.productsData.slice(0, 4);
             
             container.innerHTML = featured.map(product => {
-                // Vérifier si l'image est valide
                 const imageUrl = product.image && product.image.startsWith('http') 
                     ? product.image 
                     : 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800';
@@ -2429,7 +2630,7 @@
                             ${product.oldPrice > 0 ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : ''}
                         </div>
                         <div class="product-actions">
-                            <button class="btn-buy" onclick="app.buyProduct(${product.id})">
+                            <button class="btn-buy" onclick="window.app.buyProduct(${product.id})">
                                 <i class="fas fa-shopping-cart"></i> Acheter maintenant
                             </button>
                             <button class="btn-details" onclick="window.location.href='produits.html'">
@@ -2440,10 +2641,6 @@
                 </div>
             `}).join('');
         }
-        
-        // ============================================
-        // ===== 8. TÉMOIGNAGES =====
-        // ============================================
         
         let currentTestimonial = 0;
         const testimonials = document.querySelectorAll('.testimonial-card');
@@ -2467,10 +2664,6 @@
             updateTestimonialSlider();
         };
         
-        // ============================================
-        // ===== 9. MENU MOBILE =====
-        // ============================================
-        
         function initMobileMenu() {
             const menuBtn = document.getElementById('mobileMenuBtn');
             const navContainer = document.getElementById('navContainer');
@@ -2489,7 +2682,6 @@
             menuBtn.addEventListener('click', toggleMenu);
             if (overlay) overlay.addEventListener('click', toggleMenu);
             
-            // Fermer le menu quand on clique sur un lien
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navContainer.classList.remove('active');
@@ -2499,20 +2691,35 @@
                 });
             });
             
-            // Fermer le menu au redimensionnement
+            // Gestion des sous-menus sur mobile
+            document.querySelectorAll('.nav-item .nav-link .fa-chevron-down').forEach(chevron => {
+                const parentLink = chevron.closest('.nav-link');
+                const parentItem = parentLink?.closest('.nav-item');
+                
+                if (parentLink && parentItem) {
+                    parentLink.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            parentItem.classList.toggle('active');
+                        }
+                    });
+                }
+            });
+            
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 768) {
                     navContainer.classList.remove('active');
                     if (overlay) overlay.classList.remove('active');
                     document.body.style.overflow = 'auto';
                     if (menuBtn) menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    // Réinitialiser les sous-menus ouverts
+                    document.querySelectorAll('.nav-item.active').forEach(item => {
+                        item.classList.remove('active');
+                    });
                 }
             });
         }
-        
-        // ============================================
-        // ===== 10. ANIMATIONS SCROLL =====
-        // ============================================
         
         function initScrollAnimations() {
             const observer = new IntersectionObserver((entries) => {
@@ -2530,10 +2737,6 @@
                 observer.observe(section);
             });
         }
-        
-        // ============================================
-        // ===== 11. LIENS ANCRES =====
-        // ============================================
         
         function initAnchorLinks() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2554,10 +2757,6 @@
                 });
             });
         }
-        
-        // ============================================
-        // ===== 12. CHARGEMENT DES IMAGES =====
-        // ============================================
         
         function initLazyLoading() {
             if ('IntersectionObserver' in window) {
@@ -2583,12 +2782,7 @@
             }
         }
         
-        // ============================================
-        // ===== 13. INITIALISATION GLOBALE =====
-        // ============================================
-        
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialiser les composants
             initHeroSlider();
             loadFeaturedProducts();
             updateTestimonialSlider();
@@ -2597,7 +2791,6 @@
             initAnchorLinks();
             initLazyLoading();
             
-            // Cacher l'écran de chargement
             setTimeout(() => {
                 const loadingScreen = document.getElementById('loadingScreen');
                 if (loadingScreen) {
@@ -2605,7 +2798,6 @@
                 }
             }, 800);
             
-            // Initialiser les erreurs d'images
             document.querySelectorAll('img').forEach(img => {
                 img.addEventListener('error', function() {
                     this.src = 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800';
@@ -2614,7 +2806,7 @@
             });
             
             console.log('✅ Maison des Bonnes Choses - Application prête');
-            console.log('ℹ️ Connexion obligatoire pour effectuer des achats');
+            console.log('ℹ️ URL Google Sheets configurée :', GOOGLE_SHEETS_URL);
         });
     </script>
   
